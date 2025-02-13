@@ -19,15 +19,14 @@ export default function ContactOne() {
 
   return (
     <>
-      <section>{showMap && <MapComponent />}</section>
+      
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-50 justify-between">
             <div className="col-lg-4">
               <h3 className="text-24 fw-500">Keep In Touch With Us.</h3>
               <p className="mt-25">
-                Neque convallis a cras semper auctor. Libero id faucibus nisl
-                tincidunt egetnvallis.
+                EVOLVIO
               </p>
 
               <div className="y-gap-30 pt-60 lg:pt-40">

@@ -1,7 +1,11 @@
+'use client'
+
+import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-export default function HeroFive() {
+export default function   HeroFive() {
+  const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   return (
     <section className="masthead -type-4">
       <div className="container">

@@ -1,7 +1,7 @@
 export const coursesData = [
   {
       "id": 1,
-      "imageSrc": "/assets/img/coursesCards/6.png",
+      "imageSrc": "/assets/img/coursesCards/Figma.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Learn Figma - UI/UX Design Essential Training",
       "rating": 4.3,
@@ -22,7 +22,7 @@ export const coursesData = [
   },
   {
       "id": 2,
-      "imageSrc": "/assets/img/coursesCards/9.png",
+      "imageSrc": "/assets/img/coursesCards/python.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Complete Python Bootcamp From Zero to Hero in Python",
       "rating": 4.7,
@@ -46,7 +46,7 @@ export const coursesData = [
   },
   {
       "id": 3,
-      "imageSrc": "/assets/img/coursesCards/6.png",
+      "imageSrc": "/assets/img/coursesCards/Angular.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Angular - The Complete Guide (2022 Edition)",
       "rating": 4.5,
@@ -67,7 +67,7 @@ export const coursesData = [
   },
   {
       "id": 4,
-      "imageSrc": "/assets/img/coursesCards/1.png",
+      "imageSrc": "/assets/img/coursesCards/Drawing.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "The Ultimate Drawing Course Beginner to Advanced",
       "rating": 4.2,

@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import BrandsTwo from '@/components/homes/brands/BrandsTwo'
 import HeroFive from '@/components/homes/heros/HeroFive'
 import HeaderFive from '@/components/layout/headers/HeaderFive'
@@ -25,33 +20,29 @@ export const metadata = {
   title: 'Home-5 || Educrat - Professional LMS Online Education Course NextJS Template',
   description:
     'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
-  
+
 }
 
 export default function page() {
   return (
     <div className="main-content  ">
-      <Preloader/>
-        <HeaderFive/>
-        <div className="content-wrapper  js-content-wrapper overflow-hidden">
-          <HeroFive/>
-          <BrandsTwo/>
-          <CoursesFive/>
-          <CategoriesFive/>
-          <Instructors backgroundColor={'bg-beige-1'}/>
-          <StudentsFive/>
-          <LearningPathFive/>
-          <Pricing/>
-          <GetAppFive/>
-          <BlogsFive/>
-          <RecomentationFive/>
-          <FooterFive/>
+      <Preloader />
+      <HeaderFive />
+      <div className="content-wrapper  js-content-wrapper overflow-hidden">
+        <HeroFive />
+        <BrandsTwo />
+        <CoursesFive />
+        <CategoriesFive />
+        <Instructors backgroundColor={'bg-beige-1'} />
+        <StudentsFive />
+        <LearningPathFive />
+        <Pricing />
+        <GetAppFive />
+        <BlogsFive />
+        <RecomentationFive />
+        <FooterFive />
 
-        </div>
-
-
-        
-
+      </div>
 
     </div>
   )
