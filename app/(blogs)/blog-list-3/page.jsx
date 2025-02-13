@@ -9,9 +9,11 @@
 import BlogsThree from '@/components/blogs/BlogsThree'
 import PageLinks from '@/components/common/PageLinks'
 import Preloader from '@/components/common/Preloader'
+import FooterFive from '@/components/layout/footers/FooterFive'
 
 import FooterOne from '@/components/layout/footers/FooterOne'
-import Header from '@/components/layout/headers/Header'
+
+import HeaderFive from '@/components/layout/headers/HeaderFive'
 import React from 'react'
 
 export const metadata = {
@@ -26,14 +28,14 @@ export default function page() {
     <div className="main-content  ">
       <Preloader/>
 
-        <Header/>
+        <HeaderFive/>
         <div className="content-wrapper js-content-wrapper overflow-hidden">
-            <PageLinks/>
+            
 
             <BlogsThree/>
            
             
-            <FooterOne/>
+            <FooterFive/>
         </div>
 
     </div>

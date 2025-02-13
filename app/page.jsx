@@ -1,6 +1,6 @@
 
 import BrandsTwo from '@/components/homes/brands/BrandsTwo'
-import HeroFive from '@/components/homes/heros/HeroFive'
+import HomeHero from '@/components/homes/heros/HomeHero'
 import HeaderFive from '@/components/layout/headers/HeaderFive'
 import CoursesFive from '@/components/homes/courses/CoursesFive'
 import React from 'react'
@@ -8,7 +8,6 @@ import CategoriesFive from '@/components/homes/categories/CategoriesFive'
 import Instructors from '@/components/common/Instructors'
 import StudentsFive from '@/components/homes/students/StudentsFive'
 import LearningPathFive from '@/components/common/LearningCommon'
-import Pricing from '@/components/homes/pricing/Pricing'
 
 import GetAppFive from '@/components/homes/getApp/GetAppFive'
 import BlogsFive from '@/components/homes/blogs/BlogsFive'
@@ -43,14 +42,14 @@ export default async function page() {
       <Preloader />
       <HeaderFive user={user?.firstName}/>
       <div className="content-wrapper  js-content-wrapper overflow-hidden">
-        <HeroFive />
-        <BrandsTwo />
+        <HomeHero />
+        {/* <BrandsTwo /> */}
         <CoursesFive />
         <CategoriesFive />
         <Instructors backgroundColor={'bg-beige-1'} />
         <StudentsFive />
         <LearningPathFive />
-        <Pricing />
+        
         <GetAppFive />
         <BlogsFive />
         <RecomentationFive />

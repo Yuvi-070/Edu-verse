@@ -4,8 +4,10 @@
 import PageLinks from '@/components/common/PageLinks'
 import Preloader from '@/components/common/Preloader'
 import EventsOne from '@/components/events/EventsOne'
+import FooterFive from '@/components/layout/footers/FooterFive'
 import FooterOne from '@/components/layout/footers/FooterOne'
-import Header from '@/components/layout/headers/Header'
+
+import HeaderFive from '@/components/layout/headers/HeaderFive'
 import React from 'react'
 export const metadata = {
   title: 'Event-list-1 || Educrat - Professional LMS Online Education Course NextJS Template',
@@ -18,11 +20,11 @@ export default function page() {
     <div className="main-content  ">
       <Preloader/>
 
-        <Header/>
+        <HeaderFive/>
         <div className="content-wrapper js-content-wrapper overflow-hidden">
-            <PageLinks/>
+           
             <EventsOne/>
-            <FooterOne/>
+            <FooterFive/>
         </div>
 
     </div>
