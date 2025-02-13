@@ -7,8 +7,9 @@ import Menu from "../component/Menu";
 import MobileMenu from "../component/MobileMenu";
 import Image from "next/image";
 import Link from "next/link";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
-export default function HeaderFive() {
+export default function HeaderFive(user) {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,15 +85,19 @@ export default function HeaderFive() {
               </div>
 
               <div className="header-right__buttons d-flex items-center ml-30 xl:ml-20 lg:d-none">
-                <Link href="/login" className="button -underline text-purple-1">
-                  Log in
-                </Link>
-                <Link
-                  href="/signup"
-                  className="button h-50 px-30 -purple-1 -rounded text-white ml-20"
-                >
-                  Sign up
-                </Link>
+                <div>
+
+              {user && (
+                    
+                    <SignedOut>
+                      <SignInButton/>
+                    </SignedOut>
+                )}
+                </div>
+
+                <SignedIn>
+                  <UserButton/>
+                </SignedIn>
               </div>
             </div>
           </div>

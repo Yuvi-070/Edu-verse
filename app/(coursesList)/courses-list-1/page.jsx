@@ -1,10 +1,11 @@
 
 
-import PageLinks from '@/components/common/PageLinks'
 import Preloader from '@/components/common/Preloader'
 import CourseListOne from '@/components/courseList/CourseListOne'
+import FooterFive from '@/components/layout/footers/FooterFive'
 import FooterOne from '@/components/layout/footers/FooterOne'
 import Header from '@/components/layout/headers/Header'
+import HeaderFive from '@/components/layout/headers/HeaderFive'
 import React from 'react'
 
 
@@ -19,11 +20,11 @@ export default function page() {
   return (
     <div className="main-content  ">
     <Preloader/>
-        <Header/>
+        <HeaderFive/>
         <div className="content-wrapper  js-content-wrapper overflow-hidden">
-            <PageLinks/>
+           
             <CourseListOne/>
-            <FooterOne/>
+            <FooterFive/>
         </div>
     </div>
   )

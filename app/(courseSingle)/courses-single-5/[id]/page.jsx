@@ -13,6 +13,7 @@ import CourseSlider from '@/components/courseSingle/CourseSlider'
 import FooterOne from '@/components/layout/footers/FooterOne'
 
 import Header from '@/components/layout/headers/Header'
+import HeaderFive from '@/components/layout/headers/HeaderFive'
 import React from 'react'
 
 
@@ -27,7 +28,7 @@ export default function page({ params }) {
   return (
     <div  className="main-content  ">
       <Preloader/>
-        <Header/>
+        <HeaderFive/>
         <div  className="content-wrapper  js-content-wrapper">
             <PageLinks/>
             <CourseDetailsFive id={params.id} />

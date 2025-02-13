@@ -1,16 +1,16 @@
 "use client";
-import Image from "next/image";
+
 import React from "react";
-import Link from "next/link";
-import Socials from "@/components/common/Socials";
-import FooterLinks from "../component/FooterLinks";
 import Links from "../component/Links";
-export default function FooterOne() {
+import FooterLinks from "../component/FooterLinks";
+import Socials from "@/components/common/Socials";
+import Image from "next/image";
+export default function FooterFive() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <footer className="footer -type-1 bg-dark-1 -green-links">
+    <footer className="footer -type-1 bg-purple-1">
       <div className="container">
         <div className="footer-header">
           <div className="row y-gap-20 justify-between items-center">
@@ -19,7 +19,7 @@ export default function FooterOne() {
                 <Image
                   width={140}
                   height={50}
-                  src="/assets/img/footer/footer-logo.svg"
+                  src="/assets/img/general/logo-dark.svg"
                   alt="logo"
                 />
               </div>
@@ -39,9 +39,7 @@ export default function FooterOne() {
 
         <div className="footer-columns">
           <div className="row y-gap-30">
-            <FooterLinks
-              allClasses={"text-17 fw-500 text-white uppercase mb-25"}
-            />
+            <FooterLinks allClasses="text-17 fw-500 text-white uppercase mb-25" />
 
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="text-17 fw-500 text-white uppercase mb-25">
@@ -64,7 +62,7 @@ export default function FooterOne() {
           <div className="row justify-between items-center y-gap-20">
             <div className="col-auto">
               <div className="d-flex items-center h-100 text-white">
-                © {new Date().getFullYear()} Educrat. All Right Reserved.
+                © {new Date().getFullYear()} EVOLVIO. All Right Reserved.
               </div>
             </div>
 
@@ -77,13 +75,13 @@ export default function FooterOne() {
                 </div>
 
                 <div>
-                  <Link
+                  <a
                     href="#"
                     className="button px-30 h-50 -dark-6 rounded-200 text-white"
                   >
                     <i className="icon-worldwide text-20 mr-15"></i>
                     <span className="text-15">English</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

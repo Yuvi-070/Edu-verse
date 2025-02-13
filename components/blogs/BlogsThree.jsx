@@ -11,8 +11,9 @@ export default function BlogsThree() {
           <div className="page-header__content">
             <div className="row justify-center text-center">
               <div className="col-auto">
+                <section className="layout-pt-md layout-pb-md"></section>
                 <div>
-                  <h1 className="page-header__title">Latest News</h1>
+                  <h1 className="page-header__title"> Latest Blogs</h1>
                 </div>
 
                 <div>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.9.6",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -26,7 +27,7 @@
     "gsap": "^3.12.1",
     "leaflet": "^1.9.4",
     "next": "^14.0.3",
-    "prop-types": "15.6.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-calendar": "^4.3.0",
     "react-dom": "^18.2.0",

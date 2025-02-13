@@ -14,7 +14,7 @@ export const pricingData = [
   },
   {
     type: "Professional",
-    price: 599.95,
+    price: 499,
     period: "per month",
 
     features: [
@@ -27,7 +27,7 @@ export const pricingData = [
   },
   {
     type: "Business",
-    price: 999.95,
+    price: 999,
     period: "per month",
 
     features: [
