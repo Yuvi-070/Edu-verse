@@ -20,9 +20,9 @@ import Terms from '@/components/terms/Terms'
 import { SignIn, SignUp } from '@clerk/nextjs'
 import React from 'react'
 export const metadata = {
-  title: 'Sign up || Educrat - Professional LMS Online Education Course NextJS Template',
+  title: 'Sign up || EduVerse - Professional LMS Online Education Course NextJS Template',
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Elevate your e-learning content with EduVerse, Knowledge has no limits.',
   
 }
 export default function page() {

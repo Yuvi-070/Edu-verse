@@ -78,7 +78,7 @@ export default function Menu({ allClasses, headerPosition }) {
             <li className="menu-item-has-children">
               <Link
                 data-barba
-                href="/blog-list-3"
+                href="/blog-list-3" 
                 className={menuItem == "Events" ? "activeMenu" : ""}
               >
                 Blogs

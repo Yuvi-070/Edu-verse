@@ -26,9 +26,9 @@ import {
 import { currentUser } from "@clerk/nextjs/server";
 
 export const metadata = {
-  title: 'Educrat',
+  title: 'EduVerse',
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Elevate your e-learning content with EduVerse, Knowledge has no limit.',
 
 }
 
