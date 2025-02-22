@@ -39,7 +39,7 @@ export default function FooterFive() {
 
         <div className="footer-columns">
           <div className="row y-gap-30">
-            <FooterLinks allClasses="text-17 fw-500 text-white uppercase mb-25" />
+
 
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="text-17 fw-500 text-white uppercase mb-25">
@@ -62,7 +62,7 @@ export default function FooterFive() {
           <div className="row justify-between items-center y-gap-20">
             <div className="col-auto">
               <div className="d-flex items-center h-100 text-white">
-                © {new Date().getFullYear()} EVOLVIO. All Right Reserved.
+                © {new Date().getFullYear()} Eud-verse. All Right Reserved.
               </div>
             </div>
 
@@ -75,13 +75,7 @@ export default function FooterFive() {
                 </div>
 
                 <div>
-                  <a
-                    href="#"
-                    className="button px-30 h-50 -dark-6 rounded-200 text-white"
-                  >
-                    <i className="icon-worldwide text-20 mr-15"></i>
-                    <span className="text-15">English</span>
-                  </a>
+
                 </div>
               </div>
             </div>

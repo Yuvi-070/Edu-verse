@@ -7,11 +7,11 @@ export const contactData = [
   {
     id: 2,
     icon: "/assets/img/contact-1/2.svg",
-    phoneNumber: "+(91) 123 456 7890",
+    phoneNumber: "+(91) 7219636275",
   },
   {
     id: 3,
     icon: "/assets/img/contact-1/3.svg",
-    email: "hi@evolvio.com",
+    email: "yuvrajtale03@gmail.com",
   },
 ];

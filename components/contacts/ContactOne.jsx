@@ -26,7 +26,7 @@ export default function ContactOne() {
             <div className="col-lg-4">
               <h3 className="text-24 fw-500">Keep In Touch With Us.</h3>
               <p className="mt-25">
-                EVOLVIO
+                EduVerse
               </p>
 
               <div className="y-gap-30 pt-60 lg:pt-40">
@@ -54,8 +54,8 @@ export default function ContactOne() {
             <div className="col-lg-7">
               <h3 className="text-24 fw-500">Send a Message.</h3>
               <p className="mt-25">
-                Neque convallis a cras semper auctor. Libero id faucibus nisl
-                <br /> tincidunt egetnvallis.
+                  Contact us for Seamless Interaction
+                  <br /> Never Letting you Down!
               </p>
 
               <form

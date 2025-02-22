@@ -22,12 +22,12 @@ const masthead_info = [
   {
     id: 1,
     icon: masthead_icon_1,
-    text: "Over 12 million students",
+    text: "Over 12 hundred students",
   },
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "More than 60,000 courses",
+    text: "More than 10+ courses",
   },
   {
     id: 3,
@@ -38,11 +38,11 @@ const masthead_info = [
 
 const hero_content = {
   title: "Learn New Skills Online with Top",
-  text_underline: "Educators",
+  text_underline: "Youtubers",
   info_hero: (
     <>
-      Build skills with courses, certificates, and degrees online from
-      <br /> world-class universities and companies.
+      Build skills with courses, certificates online from
+      <br /> world-class Influnsers and Youtubers.
     </>
   ),
   starts: [
@@ -123,7 +123,7 @@ const HomeHero = () => {
                   <div className="col-12 col-sm-auto">
                     <Link
                       data-barba
-                      href="/signup"
+                      href="#"
                       className="button -md -purple-1 text-white"
                     >
                       Join For Free
@@ -132,7 +132,7 @@ const HomeHero = () => {
                   <div className="col-12 col-sm-auto">
                     <Link
                       data-barba
-                      href="/courses-list-1"
+                      href="/courses-list-5"
                       className="button -md -outline-green-1 text-green-1"
                     >
                       Find Courses
@@ -184,7 +184,7 @@ const HomeHero = () => {
                     </div>
                     <div className="ml-20">
                       <div className="text-orange-1 text-16 fw-500 lh-1">
-                        3.000 +
+                        10 +
                       </div>
                       <div className="mt-3">Free Courses</div>
                     </div>
@@ -206,7 +206,7 @@ const HomeHero = () => {
                     <Image src={move_icon_2} alt="icon" />
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
-                        Ali Tufan
+                        Code With Harry
                       </div>
                       <div className="mt-3">UX/UI Designer</div>
                       <div className="d-flex x-gap-5 mt-3">
@@ -245,7 +245,7 @@ const HomeHero = () => {
                       <div className="text-purple-1 text-16 fw-500 lh-1">
                         Congrats!
                       </div>
-                      <div className="mt-3">Your Admission Completed</div>
+                      
                     </div>
                   </div>
                 </div>

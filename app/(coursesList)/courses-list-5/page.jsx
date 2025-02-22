@@ -6,7 +6,7 @@ import CourseListFive from '@/components/courseList/CourseListFive'
 
 import FooterOne from '@/components/layout/footers/FooterOne'
 
-import HeaderFive from '@/components/layout/headers/HeaderFive'
+import Header from '@/components/layout/headers/Header'
 import React from 'react'
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function page() {
   return (
     <div className="main-content  ">
       <Preloader/>
-        <HeaderFive/>
+        <Header/>
         <div className="content-wrapper  js-content-wrapper overflow-hidden">
             
             <CourseListFive/>
