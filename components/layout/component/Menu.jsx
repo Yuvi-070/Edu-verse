@@ -56,7 +56,7 @@ export default function Menu({ allClasses, headerPosition }) {
             >
               Home <i className="text-13 ml-10"></i>
             </Link>
-
+            <li className="menu-item-has-children">
             <Link
               data-barba
               href="/courses-list-5"
@@ -64,12 +64,17 @@ export default function Menu({ allClasses, headerPosition }) {
             >
               Courses <i className="text-13 ml-10"></i>
             </Link>
-
-            <li className="menu-item-has-children">
-              
             </li>
-            <li className="menu-item-has-children">
+            
 
+            <li className="menu-item-has-children">
+              <Link
+                data-barba
+                href="/event-list-1"
+                className={menuItem == "Events" ? "activeMenu" : ""}
+              >
+                Seminars <i className="text-13 ml-10"></i>
+              </Link>
             </li>
 
             <li>

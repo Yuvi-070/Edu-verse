@@ -187,7 +187,7 @@ export default function CourseListFive() {
 
                 <div>
                   <p className="page-header__text">
-                    Write an introductory description of the category.
+                    Learn from Top Youtubes.
                   </p>
                 </div>
               </div>

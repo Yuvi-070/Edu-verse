@@ -44,7 +44,7 @@ export default function CoursesEight() {
               <h2 className="sectionTitle__title ">Our Most Popular Courses</h2>
 
               <p className="sectionTitle__text ">
-                10,000+ unique online course list designs
+                10+
               </p>
             </div>
           </div>

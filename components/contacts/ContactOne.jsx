@@ -5,9 +5,7 @@ import Image from "next/image";
 import { contactData } from "@/data/contactLinks";
 import dynamic from "next/dynamic";
 
-const MapComponent = dynamic(() => import("./Map"), {
-  ssr: false,
-});
+
 export default function ContactOne() {
   const [showMap, setShowMap] = useState(false);
   useEffect(() => {

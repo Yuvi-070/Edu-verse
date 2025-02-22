@@ -10,10 +10,10 @@ import masthead_icon_1 from "../../../public/assets/img/masthead/icons/1.svg";
 import masthead_icon_2 from "../../../public/assets/img/masthead/icons/2.svg";
 import masthead_icon_3 from "../../../public/assets/img/masthead/icons/3.svg";
 // move img and icon
-import move_img_1 from "../../../public/assets/img/masthead/1.png";
+import move_img_2 from "../../../public/assets/img/masthead/e learning.png";
 
-import move_img_2 from "../../../public/assets/img/masthead/2.png";
-import move_img_3 from "../../../public/assets/img/masthead/3.png";
+import move_img_1 from "../../../public/assets/img/masthead/freepik__the-style-is-candid-image-photography-with-natural__53648.png";
+import move_img_3 from "../../../public/assets/img/masthead/freepik__upload__46484.png";
 import move_icon_1 from "../../../public/assets/img/masthead/1.svg";
 import move_icon_2 from "../../../public/assets/img/masthead/4.png";
 import move_icon_3 from "../../../public/assets/img/masthead/2.svg";
@@ -22,12 +22,12 @@ const masthead_info = [
   {
     id: 1,
     icon: masthead_icon_1,
-    text: "Over 12 hundred students",
+    text: "Explore New Courses",
   },
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "More than 10+ courses",
+    text: "All Courses Channel ",
   },
   {
     id: 3,
@@ -123,7 +123,7 @@ const HomeHero = () => {
                   <div className="col-12 col-sm-auto">
                     <Link
                       data-barba
-                      href="#"
+                      href="/sign-in"
                       className="button -md -purple-1 text-white"
                     >
                       Join For Free
@@ -184,7 +184,7 @@ const HomeHero = () => {
                     </div>
                     <div className="ml-20">
                       <div className="text-orange-1 text-16 fw-500 lh-1">
-                        10 +
+                        Top Youtube Channels 
                       </div>
                       <div className="mt-3">Free Courses</div>
                     </div>
@@ -203,12 +203,12 @@ const HomeHero = () => {
                     data-move="60"
                     className="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move"
                   >
-                    <Image src={move_icon_2} alt="icon" />
+                    <Image  alt="icon" />
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
                         Code With Harry
                       </div>
-                      <div className="mt-3">UX/UI Designer</div>
+                      <div className="mt-3">Java Developer</div>
                       <div className="d-flex x-gap-5 mt-3">
                         {starts.map((start, index) => (
                           <div key={index}>
@@ -243,7 +243,7 @@ const HomeHero = () => {
                     </div>
                     <div className="">
                       <div className="text-purple-1 text-16 fw-500 lh-1">
-                        Congrats!
+                        Get E-Certificate!
                       </div>
                       
                     </div>
