@@ -10,10 +10,10 @@ import masthead_icon_1 from "../../../public/assets/img/masthead/icons/1.svg";
 import masthead_icon_2 from "../../../public/assets/img/masthead/icons/2.svg";
 import masthead_icon_3 from "../../../public/assets/img/masthead/icons/3.svg";
 // move img and icon
-import move_img_1 from "../../../public/assets/img/masthead/1.png";
+import move_img_2 from "../../../public/assets/img/masthead/e learning.png";
 
-import move_img_2 from "../../../public/assets/img/masthead/2.png";
-import move_img_3 from "../../../public/assets/img/masthead/3.png";
+import move_img_1 from "../../../public/assets/img/masthead/freepik__the-style-is-candid-image-photography-with-natural__53648.png";
+import move_img_3 from "../../../public/assets/img/masthead/freepik__upload__46484.png";
 import move_icon_1 from "../../../public/assets/img/masthead/1.svg";
 import move_icon_2 from "../../../public/assets/img/masthead/4.png";
 import move_icon_3 from "../../../public/assets/img/masthead/2.svg";
@@ -123,7 +123,7 @@ const HomeHero = () => {
                   <div className="col-12 col-sm-auto">
                     <Link
                       data-barba
-                      href="#"
+                      href="/sign-in"
                       className="button -md -purple-1 text-white"
                     >
                       Join For Free
