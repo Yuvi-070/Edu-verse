@@ -1,13 +1,14 @@
 export const coursesData = [
   {
+    
       "id": 1,
       "imageSrc": "/assets/img/coursesCards/Figma.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "UI/UX Design full course",
       "rating": 4.3,
-      "ratingCount": 1922,
-      "lessonCount": 6,
-      "duration": 1320,
+      "ratingCount": 1900,
+      "lessonCount": 1,
+      "duration": 33,
       "level": "Beginner",
       "category": "Design",
       "state": "Popular",
@@ -15,7 +16,8 @@ export const coursesData = [
       "authorName": "The Cutting Edge School",
       "viewStatus": "Good",
       "difficulty": "Easy",
-      "desc": ""
+      "desc": "",
+      "src":"https://www.youtube.com/embed/XdER8igjPvE?si=CfydMaw2wFvZxgzq"
   },
   {
       "id": 2,
@@ -36,7 +38,8 @@ export const coursesData = [
       "state": "Fetured",
       "viewStatus": "Low",
       "difficulty": "Easy",
-      "desc": "Introductory course on web hosting, domain registration, and how you can easily publish and edit your website online"
+      "desc": "Introductory course on web hosting, domain registration, and how you can easily publish and edit your website online",
+    "src":"https://www.youtube.com/embed/t2_Q2BRzeEE?si=-3hB6DAb2j9LXLIN"
   },
   {
       "id": 3,
@@ -54,7 +57,8 @@ export const coursesData = [
       "state": "Trending",
       "viewStatus": "Great",
       "difficulty": "Easy",
-      "desc": "Learn C++ fundamentals, including OOP, data structures, and algorithms. Perfect for beginners! ."
+      "desc": "Learn C++ fundamentals, including OOP, data structures, and algorithms. Perfect for beginners! .",
+    "src":"https://www.youtube.com/embed/e7sAf4SbS_g?si=54ACB-q2Mm5c8Uws"
   },
   {
       "id": 4,
@@ -72,7 +76,8 @@ export const coursesData = [
       "state": "Trending",
       "viewStatus": "Good",
       "difficulty": "Easy",
-      "desc": "Master Java fundamentals, including OOP, data structures, and real-world applications. Perfect for beginners!"
+      "desc": "Master Java fundamentals, including OOP, data structures, and real-world applications. Perfect for beginners!",
+    "src":"https://www.youtube.com/embed/UmnCZ7-9yDY?si=IkoVOHY8XiGWw-Jb"
   },
   {
       "id": 5,
@@ -90,7 +95,8 @@ export const coursesData = [
       "state": "Popular",
       "viewStatus": "Low",
       "difficulty": "Meduium",
-      "desc": "Learn essential data structures like arrays, linked lists, stacks, queues, trees, and graphs for efficient problem-solving!"
+      "desc": "Learn essential data structures like arrays, linked lists, stacks, queues, trees, and graphs for efficient problem-solving!",
+    "src":"https://www.youtube.com/embed/https://youtu.be/5_5oE5lgrhw?si=r3XtVVAVNXVAu7Zq"
   },
   {
     "id": 6,
@@ -108,7 +114,8 @@ export const coursesData = [
     "state": "Popular",
     "viewStatus": "Low",
     "difficulty": "Meduium",
-    "desc": " Learn how AI enhances SEO, content creation, ad targeting, and customer engagement. Master tools & strategies for data-driven marketing!"
+    "desc": " Learn how AI enhances SEO, content creation, ad targeting, and customer engagement. Master tools & strategies for data-driven marketing!",
+    "src":"https://www.youtube.com/embed/https://youtu.be/kunkYTKFNtI?si=AVHh8y6dGkaiMTcg"
 },
 {
     "id": 7,
@@ -126,7 +133,8 @@ export const coursesData = [
     "state": "Popular",
     "viewStatus": "High",
     "difficulty": "Meduium",
-    "desc": "Learn 3D modeling, texturing, animation, and rendering using Blender. Perfect for beginners and aspiring 3D artists!"
+    "desc": "Learn 3D modeling, texturing, animation, and rendering using Blender. Perfect for beginners and aspiring 3D artists!",
+    "src":"https://www.youtube.com/embed/fUA8tfC-0-E?si=wc25FMa-PF95OPTK"
 },
 {
     "id": 8,
@@ -144,7 +152,8 @@ export const coursesData = [
     "state": "Popular",
     "viewStatus": "High",
     "difficulty": "Meduium",
-    "desc": "Learn to build AI models for text, images, and music generation using deep learning and neural networks. Perfect for AI enthusiasts! "
+    "desc": "Learn to build AI models for text, images, and music generation using deep learning and neural networks. Perfect for AI enthusiasts! ",
+  "src":"https://www.youtube.com/embed/nJ25yl34Uqw?si=EZYuZ0DZaI_OtOk1"
 },
 {
     "id": 9,
@@ -162,7 +171,8 @@ export const coursesData = [
     "state": "Popular",
     "viewStatus": "High",
     "difficulty": "Meduium",
-    "desc": " Learn the fundamentals of budgeting, investing, financial planning, and market analysis to make informed financial decisions!"
+    "desc": " Learn the fundamentals of budgeting, investing, financial planning, and market analysis to make informed financial decisions!",
+  "src":"https://www.youtube.com/embed/qNzv0yM7dr4?si=EPj79DtYUQnBlyVX"
 },
 {
     "id": 10,
@@ -180,7 +190,8 @@ export const coursesData = [
     "state": "Popular",
     "viewStatus": "High",
     "difficulty": "Meduium",
-    "desc": "Master Excel functions, formulas, data analysis, and automation to boost productivity and make data-driven decisions!"
+    "desc": "Master Excel functions, formulas, data analysis, and automation to boost productivity and make data-driven decisions!",
+  "src":"https://www.youtube.com/embed/Kjz_DDO4Fzs?si=mtldUkuueBb3iU13"
 },
 
 ]

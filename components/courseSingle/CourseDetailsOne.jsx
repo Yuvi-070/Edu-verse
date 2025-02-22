@@ -5,7 +5,7 @@ import Star from "../common/Star";
 import { coursesData } from "@/data/courses";
 import React, { useState, useEffect } from "react";
 
-import PinContent from "./PinContent";
+import PinContentTwo from "./PinContentTwo";
 import Overview from "./Overview";
 import CourseContent from "./CourseContent";
 import Instractor from "./Instractor";
@@ -19,13 +19,16 @@ const menuItems = [
 
 export default function CourseDetailsOne({ id }) {
   const [pageItem, setPageItem] = useState(coursesData[0]);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
   }, []);
 
   return (
+    
     <div id="js-pin-container" className="js-pin-container relative">
+      <section className="layout-pt-md layout-pb-md"></section>
       <section className="page-header -type-5 bg-light-6">
         <div className="page-header__bg">
           <div
@@ -80,17 +83,14 @@ export default function CourseDetailsOne({ id }) {
                     </div>
                   </div>
 
-                  <div className="d-flex items-center text-light-1">
+                  {/* <div className="d-flex items-center text-light-1">
                     <div className="icon icon-person-3 text-13"></div>
                     <div className="text-14 ml-8">
                       853 enrolled on this course
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="d-flex items-center text-light-1">
-                    <div className="icon icon-wall-clock text-13"></div>
-                    <div className="text-14 ml-8">Last updated 11/2021</div>
-                  </div>
+                
                 </div>
 
                 <div className="d-flex items-center pt-20">
@@ -103,13 +103,34 @@ export default function CourseDetailsOne({ id }) {
                   <div className="text-14 lh-1 ml-10">
                     {pageItem.authorName}
                   </div>
+                  
                 </div>
+                
+               
+                
               </div>
+             
+            </div>
+            <div
+              className=" row y-gap-30 col-xl-7 col-lg-8"
+
+            >
+              <iframe
+                height="500px"
+                width="100%"
+                src={pageItem.src}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
         </div>
+        
+        
       </section>
-      <PinContent pageItem={pageItem} />
+      
+      <PinContentTwo pageItem={pageItem} />
 
       <section className="layout-pt-md layout-pb-md">
         <div className="container">

@@ -69,11 +69,11 @@ export default function AuthImageMove() {
             height={485}
             data-move="40"
             className="js-mouse-move"
-            src="/assets/img/home-9/hero/1.png"
+            src=""
             alt="icon"
           />
         </div>
-        <div className="-el-3">
+        {/* <div className="-el-3">
           <Image
             width={108}
             height={108}
@@ -82,8 +82,8 @@ export default function AuthImageMove() {
             src="/assets/img/home-9/hero/2.png"
             alt="icon"
           />
-        </div>
-        <div className="-el-4">
+        </div> */}
+        {/* <div className="-el-4">
           <Image
             width={108}
             height={108}
@@ -92,7 +92,7 @@ export default function AuthImageMove() {
             src="/assets/img/home-9/hero/3.png"
             alt="icon"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

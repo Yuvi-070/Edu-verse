@@ -68,11 +68,7 @@ export default function FooterFive() {
 
             <div className="col-auto">
               <div className="d-flex x-gap-20 y-gap-20 items-center flex-wrap">
-                <div>
-                  <div className="d-flex x-gap-15 text-white">
-                    <Links />
-                  </div>
-                </div>
+                
 
                 <div>
 

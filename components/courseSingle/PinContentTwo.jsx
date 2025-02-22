@@ -34,6 +34,7 @@ export default function PinContentTwo({ pageItem }) {
         }
         className="courses-single-info js-pin-content"
       >
+       
         <div
           style={{ position: "sticky", top: "200px" }}
           className="bg-white shadow-2 rounded-8 border-light py-10 px-10"
