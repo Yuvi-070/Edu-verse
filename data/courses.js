@@ -1,13 +1,14 @@
 export const coursesData = [
   {
+    
       "id": 1,
       "imageSrc": "/assets/img/coursesCards/Figma.png",
       "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "UI/UX Design full course",
       "rating": 4.3,
-      "ratingCount": 1922,
-      "lessonCount": 6,
-      "duration": 1320,
+      "ratingCount": 1900,
+      "lessonCount": 1,
+      "duration": 33,
       "level": "Beginner",
       "category": "Design",
       "state": "Popular",
@@ -15,7 +16,8 @@ export const coursesData = [
       "authorName": "The Cutting Edge School",
       "viewStatus": "Good",
       "difficulty": "Easy",
-      "desc": ""
+      "desc": "",
+      "src":"https://www.youtube.com/embed/XdER8igjPvE?si=CfydMaw2wFvZxgzq"
   },
   {
       "id": 2,
