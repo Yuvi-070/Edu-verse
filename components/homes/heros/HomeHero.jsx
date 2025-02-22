@@ -203,7 +203,7 @@ const HomeHero = () => {
                     data-move="60"
                     className="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move"
                   >
-                    <Image src={move_icon_2} alt="icon" />
+                    <Image  alt="icon" />
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
                         Code With Harry

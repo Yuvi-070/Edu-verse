@@ -4,7 +4,7 @@ import Preloader from "@/components/common/Preloader";
 import ContactOne from "@/components/contacts/ContactOne";
 import FooterOne from "@/components/layout/footers/FooterOne";
 
-import HeaderFive from "@/components/layout/headers/HeaderFive";
+import Header from "@/components/layout/headers/Header";
 import React from "react";
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function page() {
     <div className="main-content  ">
       <Preloader />
 
-      <HeaderFive />
+      <Header />
       <div className="content-wrapper js-content-wrapper overflow-hidden">
         <div className="main-content  ">
           <div className="content-wrapper js-content-wrapper overflow-hidden">
