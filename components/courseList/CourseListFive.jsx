@@ -187,7 +187,7 @@ export default function CourseListFive() {
 
                 <div>
                   <p className="page-header__text">
-                    Write an introductory description of the category.
+                  Learn Python, Java, and C++ fundamentals, master data structures like arrays, linked lists, and trees, and explore UI/UX design for creating user-friendly digital experiences—all in one course!
                   </p>
                 </div>
               </div>

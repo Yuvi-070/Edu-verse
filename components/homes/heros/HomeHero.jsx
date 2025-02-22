@@ -22,12 +22,12 @@ const masthead_info = [
   {
     id: 1,
     icon: masthead_icon_1,
-    text: "Over 12 hundred students",
+    text: "Explore New Courses",
   },
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "More than 10+ courses",
+    text: "All Courses Channel ",
   },
   {
     id: 3,
@@ -184,7 +184,7 @@ const HomeHero = () => {
                     </div>
                     <div className="ml-20">
                       <div className="text-orange-1 text-16 fw-500 lh-1">
-                        10 +
+                        Top Youtube Channels 
                       </div>
                       <div className="mt-3">Free Courses</div>
                     </div>
@@ -208,7 +208,7 @@ const HomeHero = () => {
                       <div className="text-dark-1 text-16 fw-500 lh-1">
                         Code With Harry
                       </div>
-                      <div className="mt-3">UX/UI Designer</div>
+                      <div className="mt-3">Java Developer</div>
                       <div className="d-flex x-gap-5 mt-3">
                         {starts.map((start, index) => (
                           <div key={index}>
@@ -243,7 +243,7 @@ const HomeHero = () => {
                     </div>
                     <div className="">
                       <div className="text-purple-1 text-16 fw-500 lh-1">
-                        Congrats!
+                        Get E-Certificate!
                       </div>
                       
                     </div>

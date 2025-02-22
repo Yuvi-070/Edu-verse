@@ -38,7 +38,7 @@ export default async function page() {
       <div className="content-wrapper  js-content-wrapper overflow-hidden">
         <HomeHero />
         <CoursesFive />
-        <CategoriesFive />
+        {/* <CategoriesFive /> */}
         <LearningPathFive />
         <FooterOne />
 

@@ -11,7 +11,7 @@ export default function CategoriesFive() {
               <h2 className="sectionTitle__title ">Top Categories</h2>
 
               <p className="sectionTitle__text ">
-                10,000+ unique online course list designs
+                Top unique online course lists
               </p>
             </div>
           </div>
