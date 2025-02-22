@@ -866,84 +866,33 @@ export const instractorsEight = [
 export const instractorsNine = [
   {
     id: 49,
-    name: "Floyd Miles",
+    name: "Abhijit Banerji",
     image: "/assets/img/streams/1.png",
     
     category:'Business',
     email: "miles@gmail.com",
-    role: "Marketing Coordinator",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+    role: "Business",
+    
   },
   {
     id: 50,
-    name: "Jacob Jones",
+    name: "Dr. Daniel Amen",
     image: "/assets/img/streams/2.png",
     category:'Design',
     email: "jacob@gmail.com",
     role: "President of Sales",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+
   },
   {
     id: 51,
-    name: "Cody Fisher",
+    name: "Marty Lobdell",
     image: "/assets/img/streams/3.png",
     category:'Illustration',
     
     category:'Animation',
     email: "cody@gmail.com",
     role: "Nursing Assistant",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+
   },
   {
     id: 52,
@@ -952,24 +901,7 @@ export const instractorsNine = [
     category:'Business',
     email: "jane@gmail.com",
     role: "Dog Trainer",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+    
   },
   {
     id: 53,
@@ -978,24 +910,7 @@ export const instractorsNine = [
     category:'Animation',
     email: "annette@gmail.com",
     role: "Marketing Coordinator",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+   
   },
   {
     id: 54,
@@ -1005,24 +920,7 @@ export const instractorsNine = [
     category:'Animation',
     email: "robert@gmail.com",
     role: "Marketing Coordinator",
-    socialProfile: [
-      {
-        icon: "icon-facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        icon: "icon-twitter",
-        url: "https://twitter.com/?lang=en",
-      },
-      {
-        icon: "icon-instagram",
-        url: "https://www.instagram.com/",
-      },
-      {
-        icon: "icon-linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
+   
   },
 ];
 

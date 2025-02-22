@@ -49,29 +49,7 @@ export default function EventDetails({ id }) {
                   </h1>
                 </div>
 
-                <div>
-                  <div className="d-flex x-gap-50 pt-12">
-                    <div className="text-white">
-                      <div className="text-40 lh-12 fw-700">20</div>
-                      <div className="text-15">Days</div>
-                    </div>
-
-                    <div className="text-white">
-                      <div className="text-40 lh-12 fw-700">32</div>
-                      <div className="text-15">Hours</div>
-                    </div>
-
-                    <div className="text-white">
-                      <div className="text-40 lh-12 fw-700">57</div>
-                      <div className="text-15">Minutes</div>
-                    </div>
-
-                    <div className="text-white">
-                      <div className="text-40 lh-12 fw-700">13</div>
-                      <div className="text-15">Seconds</div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -82,72 +60,13 @@ export default function EventDetails({ id }) {
         <div className="container">
           <div className="row y-gap-50">
             <div className="col-xl-8 col-lg-8 lg:order-2">
-              <h4 className="text-20">About The Event</h4>
+              <h4 className="text-20">About The Expert Lecture</h4> 
               <p className="text-light-1 mt-30">
-                Phasellus enim magna, varius et commodo ut, ultricies vitae
-                velit. Ut nulla tellus, eleifend euismod pellentesque vel,
-                sagittis vel justo. In libero urna, venenatis sit amet ornare
-                non, suscipit nec risus. Sed consequat justo non mauris pretium
-                at tempor justo sodales. Quisque tincidunt laoreet malesuada.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur.
-                <br />
-                <br />
-                This course is aimed at people interested in UI/UX Design. We’ll
-                start from the very beginning and work all the way through, step
-                by step. If you already have some UI/UX Design experience but
-                want to get up to speed using Adobe XD then this course is
-                perfect for you too!
-                <br />
-                <br />
-                First, we will go over the differences between UX and UI Design.
-                We will look at what our brief for this real-world project is,
-                then we will learn about low-fidelity wireframes and how to make
-                use of existing UI design kits.
+              This expert lecture brings together top neuroscientists, psychologists, and health professionals to explore the science behind 
+              brain health. Discover cutting-edge research on memory, focus, neuroplasticity, and mental well-being. Learn practical techniques for enhancing 
+              cognitive function, reducing stress, and maintaining a healthy brain throughout life. Perfect for anyone interested in mental performance, wellness, and longevity
               </p>
-              <button className="button underline text-purple-1 mt-30">
-                Show More
-              </button>
-
-              <div className="mt-60">
-                <h4 className="text-20 mb-30">What you'll learn</h4>
-                <div className="row x-gap-100 justfiy-between">
-                  <div className="col-md-6">
-                    <div className="y-gap-20">
-                      {learnList.slice(0, 6).map((elm, i) => (
-                        <div key={i} className="d-flex items-center">
-                          <div className="d-flex justify-center items-center border-light rounded-full size-20 mr-10">
-                            <i className="icon-check text-6"></i>
-                          </div>
-                          <p>{elm}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="y-gap-20">
-                      {learnList.slice(6, -1).map((elm, i) => (
-                        <div key={i} className="d-flex items-center">
-                          <div className="d-flex justify-center items-center border-light rounded-full size-20 mr-10">
-                            <i className="icon-check text-6"></i>
-                          </div>
-                          <p>{elm}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-60">
-                <h4 className="text-20">Event Content</h4>
-                <ul className="ul-list y-gap-15 pt-30">
-                  {eventContent.map((elm, i) => (
-                    <li key={i}>{elm}</li>
-                  ))}
-                </ul>
-              </div>
+        
 
               <div className="mt-60">
                 <h4 className="text-20 mb-30">Our Speakers</h4>
@@ -196,9 +115,9 @@ export default function EventDetails({ id }) {
                         <div className="comments__body md:mt-15">
                           <div className="comments__header">
                             <h4 className="text-17 fw-500 lh-15">
-                              Ali Tufan
+                              Omkar Mede .
                               <span className="text-13 text-light-1 fw-400">
-                                3 Days ago
+                               2 houre ago
                               </span>
                             </h4>
 
@@ -206,15 +125,12 @@ export default function EventDetails({ id }) {
                           </div>
 
                           <h5 className="text-15 fw-500 mt-15">
-                            The best LMS Design
+                            The Best Speaker
                           </h5>
                           <div className="comments__text mt-10">
                             <p>
-                              This course is a very applicable. Professor Ng
-                              explains precisely each algorithm and even tries
-                              to give an intuition for mathematical and
-                              statistic concepts behind each algorithm. Thank
-                              you very much.
+                            The expert lecture on brain health provided valuable insights into maintaining cognitive function and overall mental well-being. 
+                            The session was well-structured, covering essential aspects such as nutrition, exercise, and mental well-being in an easy-to-understand manner.
                             </p>
                           </div>
 
@@ -248,9 +164,9 @@ export default function EventDetails({ id }) {
                         <div className="comments__body md:mt-15">
                           <div className="comments__header">
                             <h4 className="text-17 fw-500 lh-15">
-                              Ali Tufan
+                              Yuvraj Tale .
                               <span className="text-13 text-light-1 fw-400">
-                                3 Days ago
+                                3 houre ago
                               </span>
                             </h4>
 
@@ -262,11 +178,9 @@ export default function EventDetails({ id }) {
                           </h5>
                           <div className="comments__text mt-10">
                             <p>
-                              This course is a very applicable. Professor Ng
-                              explains precisely each algorithm and even tries
-                              to give an intuition for mathematical and
-                              statistic concepts behind each algorithm. Thank
-                              you very much.
+                            The discussion on brain-boosting foods, physical activity benefits, 
+                            and stress management techniques was particularly informative. The speaker effectively explained complex concepts in simple terms,
+                             making the lecture engaging and accessible to all audiences.
                             </p>
                           </div>
 
