@@ -34,6 +34,7 @@ export default function page() {
             <section  className="form-page js-mouse-move-container">
                 <AuthImageMove/>
                 <SignIn afterSignInUrl='/'/>
+                  <AuthImageMove />
             </section>
            
             
