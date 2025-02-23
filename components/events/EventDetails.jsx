@@ -254,42 +254,13 @@ export default function EventDetails({ id }) {
 
             <div className="col-xl-4 col-lg-4 lg:order-1">
               <div className="event-info bg-white rounded-8 px-30 py-30 border-light shadow-1">
-                <div className="d-flex justify-between items-center">
-                  <div className="text-24 lh-1 fw-500 text-dark-1">$96.00</div>
-
-                  <div className="d-flex items-center">
-                    <div className="text-light-1 line-through mr-10">
-                      $76.00
-                    </div>
-                    <div className="text-14 fw-500 text-dark-1 px-15 py-5 bg-green-1 rounded-4">
-                      91% off
-                    </div>
-                  </div>
-                </div>
-
-                <div className="d-flex justify-between mt-30 pb-10">
-                  <div className="d-flex items-center text-dark-1">
-                    <div className="icon-location"></div>
-                    <div className="ml-10">Total Slot</div>
-                  </div>
-                  <div>587</div>
-                </div>
-
-                <div className="d-flex justify-between pt-10 border-top-light">
-                  <div className="d-flex items-center text-dark-1">
-                    <div className="icon-location"></div>
-                    <div className="ml-10">Booked Slot</div>
-                  </div>
-                  <div>987</div>
-                </div>
+             
 
                 <div
                  onClick={() => addEventToCart(data.id)}
                   className="button -md col-12 -purple-1 text-white mt-30 cursor"
                 >
-                  {isAddedToCartEvents(data.id)
-                ? "Booked"
-                : "Book Now"}
+                <button>Watch Now</button>
                 </div>
 
                 <div className="d-flex justify-center pt-25">
