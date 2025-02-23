@@ -1,6 +1,6 @@
 
 
-import HeroFive from '@/components/homes/heros/HeroFive'
+
 import HeaderFive from '@/components/layout/headers/HeaderFive'
 import CoursesFive from '@/components/homes/courses/CoursesFive'
 import React from 'react'
@@ -10,7 +10,7 @@ import StudentsFive from '@/components/homes/students/StudentsFive'
 import LearningPathFive from '@/components/common/LearningCommon'
 import Pricing from '@/components/homes/pricing/Pricing'
 
-import GetAppFive from '@/components/homes/getApp/GetAppFive'
+
 
 import RecomentationFive from '@/components/homes/LearningRecomentation/RecomentationFive'
 import FooterFive from '@/components/layout/footers/FooterFive'
