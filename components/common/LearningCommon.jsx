@@ -13,7 +13,7 @@ export default function LearningCommon() {
               </h2>
 
               <p className="sectionTitle__text ">
-                Lorem ipsum dolor sit amet, consectetur.
+              Gain new skills, learn from experts, and achieve your goals with flexible, high-quality courses.
               </p>
             </div>
           </div>

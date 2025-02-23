@@ -61,25 +61,25 @@ export const learningPathFive = [
     id: 1,
     title: "Learn with Experts",
     image: "/assets/img/home-5/learning/1.svg",
-    description: "Grursus mal suada faci lisis that ipsum ameti consecte.",
+    description: "Expert-led courses for practical skills and real-world insights.",
   },
   {
     id: 2,
     title: "Learn Anything",
     image: "/assets/img/home-5/learning/2.svg",
-    description: "Grursus mal suada faci lisis that ipsum ameti consecte.",
+    description: "Explore endless learning opportunities across various fields with expert guidance..",
   },
   {
     id: 3,
     title: "Flexible Learning",
     image: "/assets/img/home-5/learning/3.svg",
-    description: "Grursus mal suada faci lisis that ipsum ameti consecte.",
+    description: "Learn anytime, anywhere at your own pace with expert-led courses.",
   },
   {
     id: 4,
     title: "Industrial Standart",
     image: "/assets/img/home-5/learning/4.svg",
-    description: "Grursus mal suada faci lisis that ipsum ameti consecte.",
+    description: "Learn industry-approved skills, tools, and best practices for professional success.",
   },
 ];
 

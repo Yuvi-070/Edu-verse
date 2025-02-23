@@ -42,11 +42,7 @@ export default function CourseDetailsOne({ id }) {
             <div className="row y-gap-30">
               <div className="col-xl-7 col-lg-8">
                 <div className="d-flex x-gap-15 y-gap-10 pb-20">
-                  <div>
-                    <div className="badge px-15 py-8 text-11 bg-green-1 text-dark-1 fw-400">
-                      BEST SELLER
-                    </div>
-                  </div>
+                
                   <div>
                     <div className="badge px-15 py-8 text-11 bg-orange-1 text-white fw-400">
                       NEW
@@ -66,8 +62,7 @@ export default function CourseDetailsOne({ id }) {
                 </div>
 
                 <p className="col-xl-9 mt-20">
-                  Use XD to get a job in UI Design, User Interface, User
-                  Experience design, UX design & Web Design
+                Learn industry skills with ou-relevantr expert-led courses:
                 </p>
 
                 <div className="d-flex x-gap-30 y-gap-10 items-center flex-wrap pt-20">
