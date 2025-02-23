@@ -14,12 +14,7 @@ export default function CourseContent() {
       <div id="course-content" className="pt-60 lg:pt-40">
         <h2 className="text-20 fw-500">Course Content</h2>
 
-        <div className="d-flex justify-between items-center mt-30">
-          <div className="">27 sections • 95 lectures</div>
-          <a href="#" className="underline text-purple-1">
-            Expand All Sections
-          </a>
-        </div>
+        
 
         <div className="mt-10">
           <div className="accordion -block-2 text-left js-accordion">

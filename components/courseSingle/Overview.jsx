@@ -20,25 +20,26 @@ export default function Overview() {
           style={showMore ? { maxHeight: "370px" } : {}}
         >
           <p className="">
-            Phasellus enim magna, varius et commodo ut, ultricies vitae velit.
-            Ut nulla tellus, eleifend euismod pellentesque vel, sagittis vel
-            justo. In libero urna, venenatis sit amet ornare non, suscipit nec
-            risus. Sed consequat justo non mauris pretium at tempor justo
-            sodales. Quisque tincidunt laoreet malesuada. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur.
-            <br />
-            <br />
-            This course is aimed at people interested in UI/UX Design. We’ll
-            start from the very beginning and work all the way through, step by
-            step. If you already have some UI/UX Design experience but want to
-            get up to speed using Adobe XD then this course is perfect for you
-            too!
-            <br />
-            <br />
-            First, we will go over the differences between UX and UI Design. We
-            will look at what our brief for this real-world project is, then we
-            will learn about low-fidelity wireframes and how to make use of
-            existing UI design kits.
+          Python Course – Learn Python from scratch, covering syntax, loops, functions, and real-world applications. Ideal for beginners and aspiring developers. 🚀
+
+Java Course – Master Java fundamentals, including OOP concepts, data structures, and algorithms. Perfect for beginners looking to build strong programming skills. 💻
+
+C++ Course – Explore C++ programming with a focus on object-oriented programming, problem-solving, and algorithmic thinking. Great for aspiring programmers! 🔥
+
+Data Structures Course – Understand essential data structures like arrays, linked lists, stacks, queues, trees, and graphs to improve problem-solving skills. 📊
+
+UI/UX Design Course – Learn design principles, wireframing, prototyping, and usability testing to create user-friendly digital experiences. 🎨
+
+Digital Marketing with AI – Discover how AI enhances SEO, content creation, ad targeting, and customer engagement for smarter marketing strategies. 📈
+
+Blender 3D Course – Dive into 3D modeling, texturing, animation, and rendering using Blender to create stunning visuals and animations. 🎬
+
+Generative AI Course – Learn to build AI models for generating text, images, and music using deep learning and neural networks. 🤖
+
+Finance Course – Master financial planning, investing, budgeting, and market analysis to make informed financial decisions. 💰
+
+MS Excel Course – Gain expertise in Excel functions, formulas, data analysis, and automation to enhance productivity and decision-making. 📊
+          
           </p>
         </div>
 
@@ -50,51 +51,6 @@ export default function Overview() {
         </button>
       </div>
 
-      <div className="mt-60">
-        <h4 className="text-20 mb-30">What you'll learn</h4>
-        <div className="row x-gap-100 justfiy-between">
-          <div className="col-md-6">
-            <div className="y-gap-20">
-              {learnList.slice(0, 6).map((elm, i) => (
-                <div key={i} className="d-flex items-center">
-                  <div className="d-flex justify-center items-center border-light rounded-full size-20 mr-10">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ transform: "scale(0.7)", opacity: "0.7" }}
-                    />
-                  </div>
-                  <p>{elm}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="y-gap-20">
-              {learnList.slice(6).map((elm, i) => (
-                <div key={i} className="d-flex items-center">
-                  <div className="d-flex justify-center items-center border-light rounded-full size-20 mr-10">
-                    <FontAwesomeIcon
-                      icon={faCheck}
-                      style={{ transform: "scale(0.7)", opacity: "0.7" }}
-                    />
-                  </div>
-                  <p>{elm}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-60">
-        <h4 className="text-20">Requirements</h4>
-        <ul className="ul-list y-gap-15 pt-30">
-          {requirements.map((elm, i) => (
-            <li key={i}>{elm}</li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

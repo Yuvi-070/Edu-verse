@@ -40,7 +40,7 @@ export default function CourceCard({ data, index }) {
                 <div>
                   <div className="px-15 rounded-200 bg-green-1">
                     <span className="text-11 lh-1 uppercase fw-500 text-dark-1">
-                      Best sellers
+                      Most Views
                     </span>
                   </div>
                 </div>

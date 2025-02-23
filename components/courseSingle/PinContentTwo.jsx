@@ -36,7 +36,7 @@ export default function PinContentTwo({ pageItem }) {
       >
        
         <div
-          style={{ position: "sticky", top: "200px" }}
+          style={{ position: "sticky", top: "250px" }}
           className="bg-white shadow-2 rounded-8 border-light py-10 px-10"
         >
           <div className="courses-single-info__content scroll-bar-1 pt-30 pb-20 px-20">
@@ -58,21 +58,8 @@ export default function PinContentTwo({ pageItem }) {
               )}
             </div>
 
-            <button
-              className="button -md -purple-1 text-white w-1/1"
-              onClick={() => addCourseToCart(pageItem.id)}
-            >
-              {isAddedToCartCourses(pageItem.id)
-                ? "Already Added"
-                : "Add To Cart"}
-            </button>
-            <button className="button -md -outline-dark-1 text-dark-1 w-1/1 mt-10">
-              Buy Now
-            </button>
+            
 
-            <div className="text-14 lh-1 text-center mt-30">
-              30-Day Money-Back Guarantee
-            </div>
 
             <div className="mt-25">
               <div className="d-flex justify-between py-8 ">
