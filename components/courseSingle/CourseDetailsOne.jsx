@@ -149,7 +149,7 @@ export default function CourseDetailsOne({ id }) {
               </div>
 
               <Overview />
-              <CourseContent />
+              {/* <CourseContent /> */}
               <Instractor />
               <Reviews />
             </div>

@@ -45,63 +45,63 @@ export const reviews = [
 ];
 
 export const lessonItems = [
-  {
-    id: 1,
-    title: "Course Content",
-    duration: "87 min",
-    lessons: [
-      { id: 1, title: "Introduction to the User", duration: "03:56" },
-      { id: 2, title: "Getting started with your", duration: "03:56" },
-      {
-        id: 3,
-        title:
-          "What is UI vs UX - User Interface vs User Experience vs Product",
-        duration: "03:56",
-      },
-      { id: 4, title: "Wireframing (low fidelity) in", duration: "03:56" },
-      { id: 5, title: "Viewing your prototype on", duration: "03:56" },
-      { id: 6, title: "Sharing your design", duration: "03:56" },
-    ],
-  },
-  {
-    id: 2,
-    title: "The Brief",
-    duration: "87 min",
-    lessons: [
-      {
-        id: 1,
-        title: "Introduction to the User",
-        duration: "03:56",
-        questions: 5,
-      },
-      {
-        id: 2,
-        title: "Getting started with your",
-        duration: "03:56",
-        questions: 5,
-      },
-      {
-        id: 3,
-        title:
-          "What is UI vs UX - User Interface vs User Experience vs Product",
-        duration: "03:56",
-        questions: 5,
-      },
-      {
-        id: 4,
-        title: "Wireframing (low fidelity) in",
-        duration: "03:56",
-        questions: 5,
-      },
-      {
-        id: 5,
-        title: "Viewing your prototype on",
-        duration: "03:56",
-        questions: 5,
-      },
-      { id: 6, title: "Sharing your design", duration: "03:56", questions: 5 },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Course Content",
+  //   duration: "87 min",
+  //   lessons: [
+  //     { id: 1, title: "Introduction to the User", duration: "03:56" },
+  //     { id: 2, title: "Getting started with your", duration: "03:56" },
+  //     {
+  //       id: 3,
+  //       title:
+  //         "What is UI vs UX - User Interface vs User Experience vs Product",
+  //       duration: "03:56",
+  //     },
+  //     { id: 4, title: "Wireframing (low fidelity) in", duration: "03:56" },
+  //     { id: 5, title: "Viewing your prototype on", duration: "03:56" },
+  //     { id: 6, title: "Sharing your design", duration: "03:56" },
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   title: "The Brief",
+  //   duration: "87 min",
+  //   lessons: [
+  //     {
+  //       id: 1,
+  //       title: "Introduction to the User",
+  //       duration: "03:56",
+  //       questions: 5,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Getting started with your",
+  //       duration: "03:56",
+  //       questions: 5,
+  //     },
+  //     {
+  //       id: 3,
+  //       title:
+  //         "What is UI vs UX - User Interface vs User Experience vs Product",
+  //       duration: "03:56",
+  //       questions: 5,
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Wireframing (low fidelity) in",
+  //       duration: "03:56",
+  //       questions: 5,
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "Viewing your prototype on",
+  //       duration: "03:56",
+  //       questions: 5,
+  //     },
+  //     { id: 6, title: "Sharing your design", duration: "03:56", questions: 5 },
+  //   ],
+  // },
   {
     id: 3,
     title: "Type, Color & Icon Introduction",

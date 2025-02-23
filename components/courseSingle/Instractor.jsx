@@ -4,7 +4,7 @@ import React from "react";
 export default function Instractor() {
   return (
     <div id="instructors" className="pt-60 lg:pt-40">
-      <h2 className="text-20 fw-500">Instructor</h2>
+      <h2 className="text-20 fw-500">Platform</h2>
 
       <div className="mt-30">
         <div className="d-flex x-gap-20 y-gap-20 items-center flex-wrap">
