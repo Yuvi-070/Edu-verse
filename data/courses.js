@@ -43,8 +43,8 @@ export const coursesData = [
   },
   {
       "id": 3,
-      "imageSrc": "/assets/img/coursesCards/Angular.png",
-      "authorImageSrc": "/assets/img/general/avatar-1.png",
+    "imageSrc": "/assets/img/general/cpp.png",
+    "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Complate C++ Tutorials",
       "rating": 4.5,
       "ratingCount": 1895,
@@ -62,8 +62,8 @@ export const coursesData = [
   },
   {
       "id": 4,
-      "imageSrc": "/assets/img/coursesCards/Drawing.png",
-      "authorImageSrc": "/assets/img/general/avatar-1.png",
+    "imageSrc": "/assets/img/general/java.png",
+    "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Java Programming Course",
       "rating": 4.2,
       "ratingCount": 1485,
@@ -81,8 +81,8 @@ export const coursesData = [
   },
   {
       "id": 5,
-      "imageSrc": "/assets/img/coursesCards/11.png",
-      "authorImageSrc": "/assets/img/general/avatar-1.png",
+      "imageSrc": "/assets/img/general/data.jpg",
+    "authorImageSrc": "/assets/img/general/avatar-1.png",
       "title": "Data structure and algorithm",
       "rating": 3.8,
       "ratingCount": 1965,
@@ -96,11 +96,11 @@ export const coursesData = [
       "viewStatus": "Low",
       "difficulty": "Meduium",
       "desc": "Learn essential data structures like arrays, linked lists, stacks, queues, trees, and graphs for efficient problem-solving!",
-    "src":"https://www.youtube.com/embed/https://youtu.be/5_5oE5lgrhw?si=r3XtVVAVNXVAu7Zq"
+    "src":"https://www.youtube.com/embed/5_5oE5lgrhw?si=wZnt9W2T8cnGA7A2"
   },
   {
     "id": 6,
-    "imageSrc": "/assets/img/coursesCards/11.png",
+    "imageSrc": "/assets/img/general/digital marketing.png",
     "authorImageSrc": "/assets/img/general/avatar-1.png",
     "title": "Digital Marketing with AI Course",
     "rating": 3.8,
@@ -115,12 +115,12 @@ export const coursesData = [
     "viewStatus": "Low",
     "difficulty": "Meduium",
     "desc": " Learn how AI enhances SEO, content creation, ad targeting, and customer engagement. Master tools & strategies for data-driven marketing!",
-    "src":"https://www.youtube.com/embed/https://youtu.be/kunkYTKFNtI?si=AVHh8y6dGkaiMTcg"
+    "src":"https://www.youtube.com/embed/kunkYTKFNtI?si=XKvWH0UGTYyEnR_o"
 },
 {
     "id": 7,
-    "imageSrc": "/assets/img/coursesCards/11.png",
-    "authorImageSrc": "/assets/img/general/avatar-1.png",
+  "imageSrc": "/assets/img/general/Blender-3D-Modeling-Course.png",
+  "authorImageSrc": "/assets/img/general/avatar-1.png",
     "title": "Blender 3D Course ",
     "rating": 3.8,
     "ratingCount": 1445,
@@ -138,8 +138,8 @@ export const coursesData = [
 },
 {
     "id": 8,
-    "imageSrc": "/assets/img/coursesCards/11.png",
-    "authorImageSrc": "/assets/img/general/avatar-1.png",
+  "imageSrc": "/assets/img/general/generative ai.png",
+  "authorImageSrc": "/assets/img/general/avatar-1.png",
     "title": "Generative AI Full Cource",
     "rating": 3.8,
     "ratingCount": 1495,
@@ -157,8 +157,8 @@ export const coursesData = [
 },
 {
     "id": 9,
-    "imageSrc": "/assets/img/coursesCards/11.png",
-    "authorImageSrc": "/assets/img/general/avatar-1.png",
+  "imageSrc": "/assets/img/general/fiance course.png",
+  "authorImageSrc": "/assets/img/general/avatar-1.png",
     "title": "Finance Course",
     "rating": 3.7,
     "ratingCount": 1115,
@@ -176,8 +176,8 @@ export const coursesData = [
 },
 {
     "id": 10,
-    "imageSrc": "/assets/img/coursesCards/11.png",
-    "authorImageSrc": "/assets/img/general/avatar-1.png",
+  "imageSrc": "/assets/img/general/msexcel.png",
+  "authorImageSrc": "/assets/img/general/avatar-1.png",
     "title": "MS Exel Full Course",
     "rating": 3.9,
     "ratingCount": 1155,
