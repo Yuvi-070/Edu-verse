@@ -48,7 +48,7 @@ export default function MobileMenu({ setActiveMobileMenu, activeMobileMenu }) {
           <Link
             href="/signup"
             className={`text-dark-1 ml-30 ${
-              pathname == "/sign-up" ? "activeMenu" : "inActiveMenu"
+              pathname == "/sign-in" ? "activeMenu" : "inActiveMenu"
             } `}
           >
             Sign Up
