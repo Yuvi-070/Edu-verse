@@ -99,16 +99,14 @@ export const menuList = [
       // },
     ],
   },
-  // {
-  //   title: "Events",
-  //   links: [
-  //     { href: "/event-list-1", label: "Event List 1" },
-  //     { href: "/event-list-2", label: "Event List 2" },
-  //     { href: "/events/1", label: "Event Single" },
-  //     { href: "/event-cart", label: "Event Cart" },
-  //     { href: "/event-checkout", label: "Event Checkout" },
-  //   ],
-  // },
+  {
+    title: "Seminars",
+    links: [
+      { href: "/event-list-1", label: "Seminars" },
+     
+      
+    ],
+  },
   // {
   //   title: "Blogs",
   //   links: [
@@ -118,40 +116,20 @@ export const menuList = [
   //     { href: "/blogs/3", label: "Blog Single" },
   //   ],
   // },
+
   {
-    // title: "Pages",
-    // links: [
-    //   {
-    //     title: "About Us",
-    //     links: [
-    //       { href: "/about-1", label: "About 1" },
-    //       { href: "/about-2", label: "About 2" },
-    //     ],
-      },
-      {
-        title: "Contact",
-        links: [
-          { href: "/contact-1", label: "Contact 1" },
-          { href: "/contact-2", label: "Contact 2" },
-        ],
-      },
-      {
-        title: "Shop",
-        links: [
-          { href: "/shop-cart", label: "Shop Cart" },
-          { href: "/shop-checkout", label: "Shop Checkout" },
-          { href: "/shop-list", label: "Shop List" },
-          { href: "/shop-order", label: "Shop Order" },
-          { href: "/shop/3", label: "Shop Single" },
-        ],
-      },
-      { href: "/pricing", label: "Membership plans" },
-      { href: "/not-found", label: "404 Page" },
-      { href: "/terms", label: "FAQs" },
-      { href: "/help-center", label: "Help Center" },
-      { href: "/login", label: "Login" },
-      { href: "/signup", label: "Register" },
-      { href: "/ui-elements", label: "UI Elements" },
+    title: "Pages",
+    links: [{ href: "/contact-1", label: "Contact us" },
+      // {
+      //   title: "About Us",
+      //   links: [
+      //     { href: "/about-1", label: "About 1" },
+      //     { href: "/about-2", label: "About 2" },
+      //   ],
+      // },
+      
+      
+      
     ],
   },
 ];
