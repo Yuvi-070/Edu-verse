@@ -48,7 +48,7 @@ export default function AuthImageMove() {
             style={{ width: "100%" }}
             data-move="30"
             className="js-mouse-move"
-            src="/assets/img/login/bg.png"
+            src="/assets/img/login/signin.png"
             alt="bg"
           />
         </div>
