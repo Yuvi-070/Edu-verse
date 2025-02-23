@@ -46,17 +46,9 @@ export default function MobileMenu({ setActiveMobileMenu, activeMobileMenu }) {
 
         <div className="d-none xl:d-flex items-center px-20 py-20 border-bottom-light">
           <Link
-            href="/login"
-            className={`text-dark-1 ${
-              pathname == "/login" ? "activeMenu" : "inActiveMenu"
-            } `}
-          >
-            Log in
-          </Link>
-          <Link
             href="/signup"
             className={`text-dark-1 ml-30 ${
-              pathname == "/signup" ? "activeMenu" : "inActiveMenu"
+              pathname == "/sign-up" ? "activeMenu" : "inActiveMenu"
             } `}
           >
             Sign Up

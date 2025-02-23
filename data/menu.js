@@ -99,34 +99,34 @@ export const menuList = [
       // },
     ],
   },
+  // {
+  //   title: "Events",
+  //   links: [
+  //     { href: "/event-list-1", label: "Event List 1" },
+  //     { href: "/event-list-2", label: "Event List 2" },
+  //     { href: "/events/1", label: "Event Single" },
+  //     { href: "/event-cart", label: "Event Cart" },
+  //     { href: "/event-checkout", label: "Event Checkout" },
+  //   ],
+  // },
+  // {
+  //   title: "Blogs",
+  //   links: [
+  //     { href: "/blog-list-1", label: "Blog List 1" },
+  //     { href: "/blog-list-2", label: "Blog List 2" },
+  //     { href: "/blog-list-3", label: "Blog List 3" },
+  //     { href: "/blogs/3", label: "Blog Single" },
+  //   ],
+  // },
   {
-    title: "Events",
-    links: [
-      { href: "/event-list-1", label: "Event List 1" },
-      { href: "/event-list-2", label: "Event List 2" },
-      { href: "/events/1", label: "Event Single" },
-      { href: "/event-cart", label: "Event Cart" },
-      { href: "/event-checkout", label: "Event Checkout" },
-    ],
-  },
-  {
-    title: "Blogs",
-    links: [
-      { href: "/blog-list-1", label: "Blog List 1" },
-      { href: "/blog-list-2", label: "Blog List 2" },
-      { href: "/blog-list-3", label: "Blog List 3" },
-      { href: "/blogs/3", label: "Blog Single" },
-    ],
-  },
-  {
-    title: "Pages",
-    links: [
-      {
-        title: "About Us",
-        links: [
-          { href: "/about-1", label: "About 1" },
-          { href: "/about-2", label: "About 2" },
-        ],
+    // title: "Pages",
+    // links: [
+    //   {
+    //     title: "About Us",
+    //     links: [
+    //       { href: "/about-1", label: "About 1" },
+    //       { href: "/about-2", label: "About 2" },
+    //     ],
       },
       {
         title: "Contact",
