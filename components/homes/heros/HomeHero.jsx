@@ -15,7 +15,7 @@ import move_img_2 from "../../../public/assets/img/masthead/e learning.png";
 import move_img_1 from "../../../public/assets/img/masthead/freepik__the-style-is-candid-image-photography-with-natural__53648.png";
 import move_img_3 from "../../../public/assets/img/masthead/freepik__upload__46484.png";
 import move_icon_1 from "../../../public/assets/img/masthead/1.svg";
-import move_icon_2 from "../../../public/assets/img/masthead/4.png";
+import move_icon_2 from "../../../public/assets/img/masthead/avatar_cwh.png";
 import move_icon_3 from "../../../public/assets/img/masthead/2.svg";
 
 const masthead_info = [
@@ -203,7 +203,7 @@ const HomeHero = () => {
                     data-move="60"
                     className="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move"
                   >
-                    <Image  alt="icon" />
+                    <Image  alt="icon" src={move_icon_2}/>
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
                         Code With Harry
@@ -243,7 +243,7 @@ const HomeHero = () => {
                     </div>
                     <div className="">
                       <div className="text-purple-1 text-16 fw-500 lh-1">
-                        Get E-Certificate!
+                        Get Skilled-Up Fast!
                       </div>
                       
                     </div>
