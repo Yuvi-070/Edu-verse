@@ -6,10 +6,12 @@ import { useState, useEffect } from "react";
 export default function CourceCardFive({ data, index }) {
   const [rating, setRating] = useState([]);
   useEffect(() => {
+    const stars = [];
     for (let i = Math.round(data.rating); i >= 1; i--) {
-      setRating((pre) => [...pre, "star"]);
+      stars.push("star");
     }
-  }, []);
+    setRating(stars);
+  }, [data.rating]);
   return (
     <div className="swiper-slide" style={{ height: "fit-content" }}>
       <div>

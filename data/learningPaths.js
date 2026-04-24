@@ -77,7 +77,7 @@ export const learningPathFive = [
   },
   {
     id: 4,
-    title: "Industrial Standart",
+    title: "Industry-ready standards",
     image: "/assets/img/home-5/learning/4.svg",
     description: "Learn industry-approved skills, tools, and best practices for professional success.",
   },

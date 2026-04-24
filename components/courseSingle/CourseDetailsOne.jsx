@@ -4,12 +4,15 @@ import Star from "../common/Star";
 
 import { coursesData } from "@/data/courses";
 import React, { useState, useEffect } from "react";
+import { useContextElement } from "@/context/Context";
 
 import PinContentTwo from "./PinContentTwo";
 import Overview from "./Overview";
 import CourseContent from "./CourseContent";
 import Instractor from "./Instractor";
 import Reviews from "./Reviews";
+import LazyYouTubeEmbed from "./LazyYouTubeEmbed";
+import CourseDetailToolbar from "./CourseDetailToolbar";
 const menuItems = [
   { id: 1, href: "#overview", text: "Overview", isActive: true },
   { id: 2, href: "#course-content", text: "Course Content", isActive: false },
@@ -19,11 +22,14 @@ const menuItems = [
 
 export default function CourseDetailsOne({ id }) {
   const [pageItem, setPageItem] = useState(coursesData[0]);
-  const [showMore, setShowMore] = useState(false);
+  const { recordCourseView } = useContextElement();
 
   useEffect(() => {
-    setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
-  }, []);
+    const match = coursesData.find((elm) => String(elm.id) === String(id));
+    const next = match || coursesData[0];
+    setPageItem(next);
+    if (match) recordCourseView(match.id);
+  }, [id, recordCourseView]);
 
   return (
     
@@ -62,8 +68,14 @@ export default function CourseDetailsOne({ id }) {
                 </div>
 
                 <p className="col-xl-9 mt-20">
-                Learn industry skills with ou-relevantr expert-led courses:
+                  Learn practical skills with curated YouTube playlists and
+                  long-form lessons — optimized for slower connections.
                 </p>
+
+                <CourseDetailToolbar
+                  courseId={pageItem.id}
+                  meta={`${pageItem.category} · ${pageItem.level} · ${pageItem.languange}`}
+                />
 
                 <div className="d-flex x-gap-30 y-gap-10 items-center flex-wrap pt-20">
                   <div className="d-flex items-center">
@@ -106,18 +118,8 @@ export default function CourseDetailsOne({ id }) {
               </div>
              
             </div>
-            <div
-              className=" row y-gap-30 col-xl-7 col-lg-8"
-
-            >
-              <iframe
-                height="500px"
-                width="100%"
-                src={pageItem.src}
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+            <div className="row y-gap-30 col-xl-7 col-lg-8">
+              <LazyYouTubeEmbed embedSrc={pageItem.src} title={pageItem.title} />
             </div>
           </div>
         </div>
@@ -148,8 +150,8 @@ export default function CourseDetailsOne({ id }) {
                 </div>
               </div>
 
-              <Overview />
-              {/* <CourseContent /> */}
+              <Overview description={pageItem.desc} />
+              <CourseContent />
               <Instractor />
               <Reviews />
             </div>

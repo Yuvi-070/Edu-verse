@@ -11,17 +11,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function CoursesFive({ tabBtnStyle }) {
   const [showSlider, setShowSlider] = useState(false);
   const [currentCourseState, setCurrentCourseState] = useState("All");
+  const [search, setSearch] = useState("");
   const [pageItem, setPageItem] = useState([]);
   useEffect(() => {
-    if (currentCourseState == "All") {
-      setPageItem(coursesData);
-    } else {
-      const filtered = coursesData.filter(
-        (elm) => elm.state == currentCourseState,
-      );
-      setPageItem(filtered);
-    }
-  }, [currentCourseState]);
+    const q = search.trim().toLowerCase();
+    const byTab =
+      currentCourseState == "All"
+        ? coursesData
+        : coursesData.filter((elm) => elm.state == currentCourseState);
+    const bySearch =
+      q.length === 0
+        ? byTab
+        : byTab.filter(
+            (elm) =>
+              String(elm.title).toLowerCase().includes(q) ||
+              String(elm.category || "")
+                .toLowerCase()
+                .includes(q) ||
+              String(elm.authorName || "")
+                .toLowerCase()
+                .includes(q),
+          );
+    setPageItem(bySearch);
+  }, [currentCourseState, search]);
 
   useEffect(() => {
     setShowSlider(true);
@@ -34,17 +46,34 @@ export default function CoursesFive({ tabBtnStyle }) {
             <div className="col-auto">
               <div className="sectionTitle ">
                 <h2 className="sectionTitle__title ">
-                  Explore Featured Courses
+                  Explore featured courses
                 </h2>
 
                 <p className="sectionTitle__text ">
-                  10+ unique online course list designs
+                  Curated YouTube-backed lessons — filter by mood or search the
+                  catalog.
                 </p>
               </div>
             </div>
 
-            <div className="col-auto">
-              <div className="tabs__controls d-flex justify-center x-gap-10 js-tabs-controls">
+            <div className="col-12 col-lg-auto">
+              <div className="edu-verse-course-search">
+                <label className="visually-hidden" htmlFor="edu-verse-course-search">
+                  Search courses
+                </label>
+                <input
+                  id="edu-verse-course-search"
+                  type="search"
+                  placeholder="Search title, topic, or educator…"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  autoComplete="off"
+                />
+              </div>
+            </div>
+
+            <div className="col-12 col-lg-auto">
+              <div className="tabs__controls d-flex flex-wrap justify-center x-gap-10 js-tabs-controls">
                 {courseStates.map((elm, i) => (
                   <div key={i}>
                     <button
@@ -75,7 +104,13 @@ export default function CoursesFive({ tabBtnStyle }) {
                 data-aos-offset="80"
                 data-aos-duration={800}
               >
-                {showSlider && (
+                {showSlider && pageItem.length === 0 && (
+                  <p className="text-16 text-light-1 pt-40">
+                    No courses match your search. Try another keyword or clear the
+                    search box.
+                  </p>
+                )}
+                {showSlider && pageItem.length > 0 && (
                   <Swiper
                     // {...setting}
                     modules={[Navigation, Pagination]}
@@ -110,13 +145,23 @@ export default function CoursesFive({ tabBtnStyle }) {
                   </Swiper>
                 )}
 
-                <button className="course-five-left section-slider-nav -prev -dark-bg-dark-2 -white -absolute size-70 rounded-full shadow-5 js-prev">
-                  <i className="icon icon-arrow-left text-24"></i>
-                </button>
+                {pageItem.length > 0 && (
+                  <>
+                    <button
+                      type="button"
+                      className="course-five-left section-slider-nav -prev -dark-bg-dark-2 -white -absolute size-70 rounded-full shadow-5 js-prev"
+                    >
+                      <i className="icon icon-arrow-left text-24"></i>
+                    </button>
 
-                <button className="course-five-right section-slider-nav -next -dark-bg-dark-2 -white -absolute size-70 rounded-full shadow-5 js-next">
-                  <i className="icon icon-arrow-right text-24"></i>
-                </button>
+                    <button
+                      type="button"
+                      className="course-five-right section-slider-nav -next -dark-bg-dark-2 -white -absolute size-70 rounded-full shadow-5 js-next"
+                    >
+                      <i className="icon icon-arrow-right text-24"></i>
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

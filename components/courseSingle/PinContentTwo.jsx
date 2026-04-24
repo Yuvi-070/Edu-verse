@@ -7,7 +7,13 @@ import ModalVideoComponent from "../common/ModalVideo";
 export default function PinContentTwo({ pageItem }) {
   const { isAddedToCartCourses, addCourseToCart } = useContextElement();
   const [isOpen, setIsOpen] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200,
+  );
+
+  const durationLabel = `${Math.floor(pageItem.duration / 60)}h ${Math.floor(
+    pageItem.duration % 60,
+  )}m`;
 
   // useEffect hook to update the screen width when the window is resized
   useEffect(() => {
@@ -58,8 +64,22 @@ export default function PinContentTwo({ pageItem }) {
               )}
             </div>
 
-            
-
+            <div className="d-flex y-gap-10 x-gap-10 flex-wrap pt-20">
+              <button
+                type="button"
+                onClick={() => addCourseToCart(pageItem.id)}
+                disabled={isAddedToCartCourses(pageItem.id)}
+                className={`button -md w-100 ${
+                  isAddedToCartCourses(pageItem.id)
+                    ? "-outline-light text-dark-1"
+                    : "-purple-1 text-white"
+                }`}
+              >
+                {isAddedToCartCourses(pageItem.id)
+                  ? "In your list"
+                  : "Add to my list"}
+              </button>
+            </div>
 
             <div className="mt-25">
               <div className="d-flex justify-between py-8 ">
@@ -67,7 +87,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-video-file"></div>
                   <div className="ml-10">Lessons</div>
                 </div>
-                <div>20</div>
+                <div>{pageItem.lessonCount}</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">
@@ -75,7 +95,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-puzzle"></div>
                   <div className="ml-10">Quizzes</div>
                 </div>
-                <div>3</div>
+                <div>—</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">
@@ -83,7 +103,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-clock-2"></div>
                   <div className="ml-10">Duration</div>
                 </div>
-                <div>13 Hours</div>
+                <div>{durationLabel}</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">
@@ -91,7 +111,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-bar-chart-2"></div>
                   <div className="ml-10">Skill level</div>
                 </div>
-                <div>Beginner</div>
+                <div>{pageItem.level}</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">
@@ -99,7 +119,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-translate"></div>
                   <div className="ml-10">Language</div>
                 </div>
-                <div>English</div>
+                <div>{pageItem.languange}</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">

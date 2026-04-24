@@ -22,7 +22,7 @@ export default function LearningCommon() {
         <div className="row y-gap-30 justify-between pt-60 lg:pt-50">
           {learningPathFive.map((elm, i) => (
             <div key={i} className="col-lg-3 col-md-6">
-              <div className="coursesCard -type-2 text-center pt-50 pb-40 px-30 bg-white rounded-8">
+              <div className="coursesCard -type-2 text-center pt-50 pb-40 px-30 bg-white rounded-8 learning-path-card-elevated">
                 <div className="coursesCard__image">
                   <Image width={60} height={60} src={elm.image} alt="image" />
                 </div>

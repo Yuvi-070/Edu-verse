@@ -27,7 +27,7 @@ const masthead_info = [
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "All Courses Channel ",
+    text: "All courses in one place",
   },
   {
     id: 3,
@@ -37,12 +37,12 @@ const masthead_info = [
 ];
 
 const hero_content = {
-  title: "Learn New Skills Online with Top",
-  text_underline: "Youtubers",
+  title: "Learn new skills online with top",
+  text_underline: "YouTube educators",
   info_hero: (
     <>
-      Build skills with courses, certificates online from
-      <br /> world-class Influnsers and Youtubers.
+      Build skills with free, curated lessons — streaming from YouTube so this
+      app stays light on your device and data plan.
     </>
   ),
   starts: [
@@ -57,6 +57,13 @@ const { title, text_underline, info_hero, starts } = hero_content;
 
 const HomeHero = () => {
   useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return undefined;
+    }
+
     const parallaxIt = () => {
       const target = document.querySelectorAll(".js-mouse-move-container");
 
@@ -85,6 +92,7 @@ const HomeHero = () => {
     };
 
     parallaxIt();
+    return undefined;
   }, []);
 
   return (
