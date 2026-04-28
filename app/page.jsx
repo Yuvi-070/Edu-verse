@@ -5,8 +5,7 @@ import React from 'react'
 import LearningPathFive from '@/components/common/LearningCommon'
 import FooterOne from '@/components/layout/footers/FooterOne'
 import Preloader from '@/components/common/Preloader'
-
-import { currentUser } from "@clerk/nextjs/server";
+import LearnerHub from '@/components/homes/LearnerHub'
 
 export const metadata = {
   title: 'EduVerse',
@@ -15,16 +14,14 @@ export const metadata = {
 
 }
 
-export default async function page() {
-
-  const user = await currentUser();
-
+export default function page() {
   return (
     <div className="main-content  ">
       <Preloader />
-      <Header user={user?.firstName}/>
+      <Header />
       <div className="content-wrapper  js-content-wrapper overflow-hidden">
         <HomeHero />
+        <LearnerHub />
         <CoursesFive />
         {/* <CategoriesFive /> */}
         <LearningPathFive />

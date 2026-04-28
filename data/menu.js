@@ -14,8 +14,20 @@ export const menuList = [
     links: [
       
       { href: "/courses-list-5", label: "Courses" },
+      { href: "/roadmaps", label: "Roadmaps" },
+      { href: "/compare", label: "Compare" },
+      { href: "/ai-recommender", label: "AI Recommender" },
 
 
+    ],
+  },
+  {
+    title: "My Learning",
+    links: [
+      { href: "/my-learning", label: "Continue Learning" },
+      { href: "/saved", label: "Saved Courses" },
+      { href: "/quiz", label: "Skill Quiz" },
+      { href: "/ai-recommender", label: "AI Study Plan" },
     ],
   },
   {

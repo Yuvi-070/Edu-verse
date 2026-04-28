@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Context from "@/context/Context";
 import { ClerkProvider } from "@clerk/nextjs";
+import MobileLearningNav from "@/components/layout/component/MobileLearningNav";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -27,7 +28,10 @@ export default function RootLayout({ children }) {
       <ClerkProvider>
       <head></head>
       <body>
-        <Context> {children}</Context>
+        <Context>
+          {children}
+          <MobileLearningNav />
+        </Context>
       </body>
       </ClerkProvider>
     </html>

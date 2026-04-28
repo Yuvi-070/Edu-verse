@@ -10,9 +10,9 @@ import Header from '@/components/layout/headers/Header'
 import React from 'react'
 
 export const metadata = {
-  title: 'Couese-list-5 || Educrat - Professional LMS Online Education Course NextJS Template',
+  title: 'Course Catalog | EduVerse',
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Browse free, YouTube-backed courses across programming, design, marketing, finance, AI, and productivity.',
   
 }
 

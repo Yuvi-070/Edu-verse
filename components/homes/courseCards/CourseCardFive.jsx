@@ -3,8 +3,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useContextElement } from "@/context/Context";
 export default function CourceCardFive({ data, index }) {
   const [rating, setRating] = useState([]);
+  const { getCourseProgress, toggleBookmark, isBookmarked } = useContextElement();
+  const progress = getCourseProgress(data.id);
+  const saved = isBookmarked(data.id);
   useEffect(() => {
     const stars = [];
     for (let i = Math.round(data.rating); i >= 1; i--) {
@@ -36,6 +40,21 @@ export default function CourceCardFive({ data, index }) {
 
           <div className="h-100 pt-15">
             <div className="d-flex items-center">
+              <div className="d-flex x-gap-8 y-gap-8 flex-wrap mb-10">
+                <span className="edu-verse-pill">{data.category}</span>
+                <span className="edu-verse-pill -muted">{data.language}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => toggleBookmark(data.id)}
+                className={`edu-verse-icon-button ml-auto ${saved ? "is-active" : ""}`}
+                aria-label={saved ? "Remove saved course" : "Save course"}
+              >
+                <i className="icon-bookmark text-14"></i>
+              </button>
+            </div>
+
+            <div className="d-flex items-center mt-5">
               <div className="text-14 lh-1 text-yellow-1 mr-10">
                 {data.rating}
               </div>
@@ -52,6 +71,7 @@ export default function CourceCardFive({ data, index }) {
                 {data.title}
               </Link>
             </div>
+            <p className="text-13 text-light-1 mt-10">{data.shortDesc}</p>
 
             <div className="d-flex x-gap-10 items-center pt-10">
               <div className="d-flex items-center">
@@ -92,6 +112,11 @@ export default function CourceCardFive({ data, index }) {
                 <div className="text-14 lh-1">{data.level}</div>
               </div>
             </div>
+
+            <div className="edu-verse-progress mt-15">
+              <div style={{ width: `${progress}%` }}></div>
+            </div>
+            <div className="text-12 text-light-1 mt-5">{progress}% complete</div>
 
             <div className="coursesCard-footer">
               <div className="coursesCard-footer__author">

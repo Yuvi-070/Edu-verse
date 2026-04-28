@@ -5,7 +5,7 @@ import { useContextElement } from "@/context/Context";
 import ModalVideoComponent from "../common/ModalVideo";
 
 export default function PinContentTwo({ pageItem }) {
-  const { isAddedToCartCourses, addCourseToCart } = useContextElement();
+  const { isAddedToCartCourses, addCourseToCart, getCourseProgress } = useContextElement();
   const [isOpen, setIsOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200,
@@ -14,6 +14,7 @@ export default function PinContentTwo({ pageItem }) {
   const durationLabel = `${Math.floor(pageItem.duration / 60)}h ${Math.floor(
     pageItem.duration % 60,
   )}m`;
+  const progress = getCourseProgress(pageItem.id);
 
   // useEffect hook to update the screen width when the window is resized
   useEffect(() => {
@@ -82,6 +83,16 @@ export default function PinContentTwo({ pageItem }) {
             </div>
 
             <div className="mt-25">
+              <div className="d-flex justify-between text-14 mb-10">
+                <span>Progress</span>
+                <span>{progress}%</span>
+              </div>
+              <div className="edu-verse-progress">
+                <div style={{ width: `${progress}%` }}></div>
+              </div>
+            </div>
+
+            <div className="mt-25">
               <div className="d-flex justify-between py-8 ">
                 <div className="d-flex items-center text-dark-1">
                   <div className="icon-video-file"></div>
@@ -95,7 +106,7 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="icon-puzzle"></div>
                   <div className="ml-10">Quizzes</div>
                 </div>
-                <div>—</div>
+                <div>1</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">
@@ -128,6 +139,14 @@ export default function PinContentTwo({ pageItem }) {
                   <div className="ml-10">Certificate</div>
                 </div>
                 <div>Yes</div>
+              </div>
+
+              <div className="d-flex justify-between py-8 border-top-light">
+                <div className="d-flex items-center text-dark-1">
+                  <div className="icon-list"></div>
+                  <div className="ml-10">Plan</div>
+                </div>
+                <div className="text-right">{pageItem.weeklyPlan}</div>
               </div>
 
               <div className="d-flex justify-between py-8 border-top-light">

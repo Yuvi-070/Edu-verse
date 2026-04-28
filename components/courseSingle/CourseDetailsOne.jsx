@@ -13,6 +13,8 @@ import Instractor from "./Instractor";
 import Reviews from "./Reviews";
 import LazyYouTubeEmbed from "./LazyYouTubeEmbed";
 import CourseDetailToolbar from "./CourseDetailToolbar";
+import CourseProgressNotes from "./CourseProgressNotes";
+import AICourseTools from "./AICourseTools";
 const menuItems = [
   { id: 1, href: "#overview", text: "Overview", isActive: true },
   { id: 2, href: "#course-content", text: "Course Content", isActive: false },
@@ -68,8 +70,7 @@ export default function CourseDetailsOne({ id }) {
                 </div>
 
                 <p className="col-xl-9 mt-20">
-                  Learn practical skills with curated YouTube playlists and
-                  long-form lessons — optimized for slower connections.
+                  {pageItem.shortDesc}
                 </p>
 
                 <CourseDetailToolbar
@@ -150,8 +151,10 @@ export default function CourseDetailsOne({ id }) {
                 </div>
               </div>
 
-              <Overview description={pageItem.desc} />
-              <CourseContent />
+              <Overview course={pageItem} />
+              <CourseProgressNotes course={pageItem} />
+              <AICourseTools course={pageItem} />
+              <CourseContent course={pageItem} />
               <Instractor />
               <Reviews />
             </div>

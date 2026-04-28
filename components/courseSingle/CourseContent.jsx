@@ -6,7 +6,7 @@ import { lessonItems } from "@/data/aboutcourses";
 import React, { useState } from "react";
 import ModalVideoComponent from "../common/ModalVideo";
 
-export default function CourseContent() {
+export default function CourseContent({ course }) {
   const [activeItemId, setActiveItemId] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -18,7 +18,15 @@ export default function CourseContent() {
 
         <div className="mt-10">
           <div className="accordion -block-2 text-left js-accordion">
-            {lessonItems.map((elm, i) => (
+            {[
+              {
+                id: 1,
+                duration: course?.duration || 60,
+                lessons: (course?.skills || []).map((skill, index) => ({
+                  title: `${index + 1}. ${skill}`,
+                })),
+              },
+            ].map((elm, i) => (
               <div
                 key={i}
                 className={`accordion__item ${
@@ -41,12 +49,12 @@ export default function CourseContent() {
                       </div>
                     </div>
                     <span className="text-17 fw-500 text-dark-1">
-                      Course Content
+                      Course plan
                     </span>
                   </div>
 
                   <div>
-                    {elm.lessons.length} lectures • {elm.duration} min
+                    {elm.lessons.length} focus areas • {elm.duration} min
                   </div>
                 </div>
 
@@ -76,13 +84,13 @@ export default function CourseContent() {
                               href="#"
                               className="text-14 lh-1 text-purple-1 underline"
                             >
-                              {elm.duration} question
+                              Checklist
                             </a>
                             <a
                               href="#"
                               className="text-14 lh-1 text-purple-1 underline"
                             >
-                              {elm.duration}
+                              {course?.weeklyPlan || `${elm.duration} min`}
                             </a>
                           </div>
                         </div>

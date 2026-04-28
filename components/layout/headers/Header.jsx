@@ -6,11 +6,16 @@ import MobileMenu from "../component/MobileMenu";
 import Image from "next/image";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 export default function HeaderFive(user) {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
+  const [search, setSearch] = useState("");
+  const router = useRouter();
   const handleSubmit = (e) => {
     e.preventDefault();
+    const q = search.trim();
+    router.push(q ? `/courses-list-5?q=${encodeURIComponent(q)}` : "/courses-list-5");
   };
   return (
     <header
@@ -53,6 +58,8 @@ export default function HeaderFive(user) {
                         required
                         type="text"
                         placeholder="What do you want to learn?"
+                        value={search}
+                        onChange={(event) => setSearch(event.target.value)}
                       />
                       <button type="submit">
                         <i className="icon icon-search"></i>

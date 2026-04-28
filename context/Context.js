@@ -13,6 +13,10 @@ export const useContextElement = () => {
 
 const LS_BOOKMARKS = "eduverse_bookmarks_v1";
 const LS_RECENT = "eduverse_recent_courses_v1";
+const LS_PROGRESS = "eduverse_progress_v1";
+const LS_NOTES = "eduverse_notes_v1";
+const LS_PROFILE = "eduverse_learning_profile_v1";
+const LS_THEME = "eduverse_theme_v1";
 
   export default function Context({ children }) {
     const [cartProducts, setCartProducts] = useState([])
@@ -21,17 +25,35 @@ const LS_RECENT = "eduverse_recent_courses_v1";
     const [cartEvents, setCartEvents] = useState([])
     const [bookmarkIds, setBookmarkIds] = useState([])
     const [recentCourseIds, setRecentCourseIds] = useState([])
+    const [courseProgress, setCourseProgress] = useState({})
+    const [courseNotes, setCourseNotes] = useState({})
+    const [learningProfile, setLearningProfile] = useState(null)
+    const [theme, setTheme] = useState("light")
 
     useEffect(() => {
       try {
         const b = localStorage.getItem(LS_BOOKMARKS);
         const r = localStorage.getItem(LS_RECENT);
+        const p = localStorage.getItem(LS_PROGRESS);
+        const n = localStorage.getItem(LS_NOTES);
+        const lp = localStorage.getItem(LS_PROFILE);
+        const t = localStorage.getItem(LS_THEME);
         if (b) setBookmarkIds(JSON.parse(b));
         if (r) setRecentCourseIds(JSON.parse(r));
+        if (p) setCourseProgress(JSON.parse(p));
+        if (n) setCourseNotes(JSON.parse(n));
+        if (lp) setLearningProfile(JSON.parse(lp));
+        if (t) setTheme(JSON.parse(t));
       } catch {
         /* ignore corrupt storage */
       }
     }, []);
+
+    useEffect(() => {
+      if (typeof document !== "undefined") {
+        document.documentElement.dataset.eduverseTheme = theme;
+      }
+    }, [theme]);
 
     useEffect(() => {
       try {
@@ -48,6 +70,40 @@ const LS_RECENT = "eduverse_recent_courses_v1";
         /* ignore */
       }
     }, [recentCourseIds]);
+
+    useEffect(() => {
+      try {
+        localStorage.setItem(LS_PROGRESS, JSON.stringify(courseProgress));
+      } catch {
+        /* ignore */
+      }
+    }, [courseProgress]);
+
+    useEffect(() => {
+      try {
+        localStorage.setItem(LS_NOTES, JSON.stringify(courseNotes));
+      } catch {
+        /* ignore */
+      }
+    }, [courseNotes]);
+
+    useEffect(() => {
+      try {
+        if (learningProfile) {
+          localStorage.setItem(LS_PROFILE, JSON.stringify(learningProfile));
+        }
+      } catch {
+        /* ignore */
+      }
+    }, [learningProfile]);
+
+    useEffect(() => {
+      try {
+        localStorage.setItem(LS_THEME, JSON.stringify(theme));
+      } catch {
+        /* ignore */
+      }
+    }, [theme]);
 
     const isBookmarked = useCallback(
       (id) => bookmarkIds.includes(Number(id)),
@@ -66,6 +122,36 @@ const LS_RECENT = "eduverse_recent_courses_v1";
       setRecentCourseIds((prev) =>
         [n, ...prev.filter((x) => x !== n)].slice(0, 16),
       );
+    }, []);
+
+    const getCourseProgress = useCallback(
+      (id) => Number(courseProgress[Number(id)] || 0),
+      [courseProgress],
+    );
+
+    const setCourseProgressValue = useCallback((id, value) => {
+      const n = Number(id);
+      const nextValue = Math.max(0, Math.min(100, Number(value) || 0));
+      setCourseProgress((prev) => ({ ...prev, [n]: nextValue }));
+    }, []);
+
+    const markCourseComplete = useCallback((id) => {
+      const n = Number(id);
+      setCourseProgress((prev) => ({ ...prev, [n]: 100 }));
+    }, []);
+
+    const getCourseNote = useCallback(
+      (id) => String(courseNotes[Number(id)] || ""),
+      [courseNotes],
+    );
+
+    const saveCourseNote = useCallback((id, note) => {
+      const n = Number(id);
+      setCourseNotes((prev) => ({ ...prev, [n]: String(note || "") }));
+    }, []);
+
+    const toggleTheme = useCallback(() => {
+      setTheme((prev) => (prev === "dark" ? "light" : "dark"));
     }, []);
     const addCourseToCart = (id)=>{
 
@@ -143,6 +229,17 @@ const LS_RECENT = "eduverse_recent_courses_v1";
         toggleBookmark,
         recentCourseIds,
         recordCourseView,
+        courseProgress,
+        getCourseProgress,
+        setCourseProgressValue,
+        markCourseComplete,
+        courseNotes,
+        getCourseNote,
+        saveCourseNote,
+        learningProfile,
+        setLearningProfile,
+        theme,
+        toggleTheme,
 
       };
     return (

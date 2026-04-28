@@ -15,6 +15,7 @@ import Star from "../common/Star";
 import PaginationTwo from "../common/PaginationTwo";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 export default function CourseListFive() {
   const [filterOpen, setFilterOpen] = useState(false);
@@ -25,6 +26,8 @@ export default function CourseListFive() {
   const [filterLevels, setFilterLevels] = useState([]);
   const [filterlanguange, setFilterlanguange] = useState([]);
   const [filterDuration, setFilterDuration] = useState([]);
+  const [search, setSearch] = useState("");
+  const searchParams = useSearchParams();
 
   const [currentSortingOption, setCurrentSortingOption] = useState("Default");
 
@@ -35,6 +38,12 @@ export default function CourseListFive() {
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
+    const q = searchParams.get("q");
+    if (q) setSearch(q);
+  }, [searchParams]);
+
+  useEffect(() => {
+    const q = search.trim().toLowerCase();
     const refItems = coursesData.filter((elm) => {
       if (filterPrice == "All") {
         return true;
@@ -43,6 +52,20 @@ export default function CourseListFive() {
       } else if (filterPrice == "Paid") {
         return elm.paid;
       }
+    }).filter((elm) => {
+      if (!q) return true;
+      return [
+        elm.title,
+        elm.category,
+        elm.authorName,
+        elm.level,
+        elm.languange,
+        elm.desc,
+        ...(elm.tags || []),
+        ...(elm.outcomes || []),
+      ]
+        .filter(Boolean)
+        .some((value) => String(value).toLowerCase().includes(q));
     });
 
     let filteredArrays = [];
@@ -98,6 +121,7 @@ export default function CourseListFive() {
     filterRatingRange,
     filterInstractors,
     filterPrice,
+    search,
     filterLevels,
     filterlanguange,
     filterDuration,
@@ -174,6 +198,26 @@ export default function CourseListFive() {
   const handleFilterDuration = (item) => {
     setFilterDuration(item);
   };
+  const clearFilters = () => {
+    setFilterCategories([]);
+    setFilterRatingRange([]);
+    setFilterInstractors([]);
+    setFilterPrice("All");
+    setFilterLevels([]);
+    setFilterlanguange([]);
+    setFilterDuration([]);
+    setSearch("");
+    setCurrentSortingOption("Default");
+  };
+  const activeFilterCount =
+    filterCategories.length +
+    filterInstractors.length +
+    filterLevels.length +
+    filterlanguange.length +
+    (filterRatingRange.length ? 1 : 0) +
+    (filterDuration.length ? 1 : 0) +
+    (filterPrice !== "All" ? 1 : 0) +
+    (search.trim() ? 1 : 0);
   return (
     <>
       <section className="page-header -type-2">
@@ -215,6 +259,24 @@ export default function CourseListFive() {
 
                 <div className="col-auto">
                   <div className="row x-gap-20 y-gap-20">
+                    <div className="col-12 col-md-auto">
+                      <div className="edu-verse-course-search">
+                        <label
+                          className="visually-hidden"
+                          htmlFor="edu-verse-course-list-search"
+                        >
+                          Search courses
+                        </label>
+                        <input
+                          id="edu-verse-course-list-search"
+                          type="search"
+                          placeholder="Search courses, skills, educators..."
+                          value={search}
+                          onChange={(event) => setSearch(event.target.value)}
+                          autoComplete="off"
+                        />
+                      </div>
+                    </div>
                     <div className="col-auto">
                       <div className="d-flex items-center">
                         <div className="text-14 lh-12 fw-500 text-dark-1 mr-20">
@@ -292,9 +354,31 @@ export default function CourseListFive() {
                         </button>
                       </div>
                     </div>
+                    {activeFilterCount > 0 && (
+                      <div className="col-auto">
+                        <button
+                          type="button"
+                          onClick={clearFilters}
+                          className="button h-50 px-20 -outline-light text-dark-1"
+                        >
+                          Clear {activeFilterCount}
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
+
+              {activeFilterCount > 0 && (
+                <div className="d-flex x-gap-10 y-gap-10 flex-wrap mb-25">
+                  {search.trim() && <span className="edu-verse-pill">Search: {search}</span>}
+                  {filterCategories.map((item) => <span key={item} className="edu-verse-pill">{item}</span>)}
+                  {filterInstractors.map((item) => <span key={item} className="edu-verse-pill">{item}</span>)}
+                  {filterLevels.map((item) => <span key={item} className="edu-verse-pill">{item}</span>)}
+                  {filterlanguange.map((item) => <span key={item} className="edu-verse-pill">{item}</span>)}
+                  {filterPrice !== "All" && <span className="edu-verse-pill">{filterPrice}</span>}
+                </div>
+              )}
 
               <div
                 className="accordion__content"
@@ -447,7 +531,7 @@ export default function CourseListFive() {
 
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                       <div className="sidebar__item">
-                        <h5 className="sidebar__title">Instructors</h5>
+                        <h5 className="sidebar__title">Educators</h5>
                         <div className="sidebar-checkbox">
                           <div
                             className="sidebar-checkbox__item"
@@ -618,7 +702,7 @@ export default function CourseListFive() {
 
                     <div className="col-xl-3 col-lg-4 col-sm-6">
                       <div className="sidebar__item">
-                        <h5 className="sidebar__title">Languange</h5>
+                        <h5 className="sidebar__title">Language</h5>
                         <div className="sidebar-checkbox">
                           <div
                             className="sidebar-checkbox__item"
@@ -749,6 +833,16 @@ export default function CourseListFive() {
           </div>
 
           <div className="row y-gap-30">
+            {sortedFilteredData.length === 0 && (
+              <div className="col-12">
+                <div className="py-40 px-30 rounded-8 bg-light-3 text-center">
+                  <h3 className="text-20 fw-500">No courses found</h3>
+                  <p className="text-15 text-light-1 mt-10">
+                    Try a broader keyword or remove one of the active filters.
+                  </p>
+                </div>
+              </div>
+            )}
             {sortedFilteredData
               .slice((pageNumber - 1) * 12, pageNumber * 12)
               .map((elm, i) => (
@@ -808,6 +902,13 @@ export default function CourseListFive() {
                         >
                           {elm.title}{" "}
                         </Link>
+                      </div>
+                      <p className="text-14 text-light-1 mt-10">{elm.shortDesc}</p>
+
+                      <div className="d-flex x-gap-8 y-gap-8 flex-wrap mt-15">
+                        {(elm.tags || []).slice(0, 3).map((tag) => (
+                          <span key={tag} className="edu-verse-pill -muted">{tag}</span>
+                        ))}
                       </div>
 
                       <div className="d-flex x-gap-10 items-center pt-10">
